@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1815px" height="703px" viewBox="0 0 1815 703" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>Landing</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Landing" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(0.000000, -4.000000)" fill-rule="nonzero">
+            <path d="M810.5,707 C1258.12679,707 1621,493.340873 1621,229.778983 C1621,194.954012 1608.66667,129.694351 1584,34 L0,1.37234841 C0,87.6336321 0,163.769177 0,229.778983 C0,493.340873 362.87321,707 810.5,707 Z" id="Oval-Copy-5" fill="#BFD4E6"></path>
+            <path d="M1000.5,686 C1448.12679,686 1810.25764,471.840218 1815,208.003728 C1816.33333,133.825018 1816.33333,64.5608817 1815,0.211320543 L249.898833,4 C209.966278,74.0982339 190,142.187589 190,208.268066 C190,472.112128 552.87321,686 1000.5,686 Z" id="Oval-Copy-7" fill="#8BB5D5"></path>
+            <path d="M872.5,681 C1320.12679,681 1677.33857,467.10596 1683,203.278006 C1685,110.076151 1663.98658,43.6501492 1619.95975,4 L115.832309,4 C79.944103,43.2833471 62,109.709349 62,203.278006 C62,467.114656 424.87321,681 872.5,681 Z" id="Oval" fill="#00639C"></path>
+        </g>
+    </g>
+</svg>

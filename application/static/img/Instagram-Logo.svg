@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="66px" height="66px" viewBox="0 0 66 66" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>Instagram Logo</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="104.047109%" y1="6.57728728%" x2="9.49462206%" y2="93.4146216%" id="linearGradient-1">
+            <stop stop-color="#6519CE" offset="0%"></stop>
+            <stop stop-color="#9E61D9" offset="29.1999578%"></stop>
+            <stop stop-color="#AD4783" offset="43.1670764%"></stop>
+            <stop stop-color="#FF0400" offset="65.3249729%"></stop>
+            <stop stop-color="#FF550F" offset="81.2592748%"></stop>
+            <stop stop-color="#FFCD00" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Instagram-Logo" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-4" fill-rule="nonzero">
+            <rect id="Combined-Shape" fill="url(#linearGradient-1)" x="0" y="0" width="66" height="66" rx="18"></rect>
+            <path d="M20.5,10.5 C14.9771525,10.5 10.5,14.9771525 10.5,20.5 L10.5,45.5 C10.5,51.0228475 14.9771525,55.5 20.5,55.5 L45.5,55.5 C51.0228475,55.5 55.5,51.0228475 55.5,45.5 L55.5,20.5 C55.5,14.9771525 51.0228475,10.5 45.5,10.5 L20.5,10.5 Z M20.5,6.5 L45.5,6.5 C53.2319865,6.5 59.5,12.7680135 59.5,20.5 L59.5,45.5 C59.5,53.2319865 53.2319865,59.5 45.5,59.5 L20.5,59.5 C12.7680135,59.5 6.5,53.2319865 6.5,45.5 L6.5,20.5 C6.5,12.7680135 12.7680135,6.5 20.5,6.5 Z" id="Rectangle-Copy" fill="#FFFFFF"></path>
+            <path d="M33,23.5 C27.7532949,23.5 23.5,27.7532949 23.5,33 C23.5,38.2467051 27.7532949,42.5 33,42.5 C38.2467051,42.5 42.5,38.2467051 42.5,33 C42.5,27.7532949 38.2467051,23.5 33,23.5 Z M33,19.5 C40.4558441,19.5 46.5,25.5441559 46.5,33 C46.5,40.4558441 40.4558441,46.5 33,46.5 C25.5441559,46.5 19.5,40.4558441 19.5,33 C19.5,25.5441559 25.5441559,19.5 33,19.5 Z" id="Rectangle-Copy-2" fill="#FFFFFF"></path>
+            <circle id="Oval" fill="#FFFFFF" cx="48.2" cy="18.8" r="2.5"></circle>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,382 @@
+@import "constants.scss";
+
+body {
+    font-family:"Source Sans Pro", sans-serif;
+}
+
+h1 {
+    font-family: "Roboto";
+    text-align: center;
+    font-weight: bold;
+}
+
+h2 {
+    text-align: center;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+p {
+    font-size: 19px;
+}
+
+.button {
+    background-color: $accentDark;
+}
+
+a.anchor {
+    display: block;    
+    position: relative;     
+    top: calc(-3em - 1.4rem);
+    visibility: hidden;
+}
+
+@media screen and (max-width: $medium-down) { // Don't display MLH trust badge on mobile
+    #mlh-trust-badge {
+        display: none !important;
+    }
+}
+
+.top-bar-container {
+    width: 100%;
+}
+
+// Title bar visible on Mobile
+.title-bar {
+    background-color: #fff;
+    justify-content: space-between;
+
+    // .menu-icon {
+    //     outline: none;
+    // }
+
+    .menu-icon::after {
+        background-color: $base0;
+        box-shadow: 0 7px 0 $base0, 0 14px 0 $base0;
+    }
+
+    #title-bar-logo {
+        height: 30px;
+        margin-right: 1em;
+    }
+}
+
+// Top bar visible on Desktop
+.top-bar {
+    background-color: #fff;
+    width: 100%;
+    padding: 0;
+    color: $textColorOnLight2;
+    font-family: modern-sans;
+
+    ul {
+        background-color: inherit;
+    }
+
+    li {
+        margin: 0 0.25em;
+    }
+
+    img { // Logo in the nav bar
+        max-height: 100%;
+        max-width: 100%;
+        height: 3em;
+        min-width: 136px;
+    }
+
+    .top-bar-left {
+        //margin-left: 2%;
+        display: none;
+    }
+
+    .top-bar-right {
+        //margin-right: calc(3em + 150px); // Extra space for MLH banner
+        margin: auto;
+
+        li {
+            margin: 0.5em;
+
+            @media screen and (max-width: $medium-down) { // Mobile devices
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        a {
+            padding: 0.75em 0.75em;
+            //border-bottom: 3px solid white;
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 3px;
+            color: inherit;
+        }
+
+        a:hover {
+            border-bottom: 3px solid $accentDark;
+            color: $accentDark;
+            margin-bottom: 0;
+        }
+
+        .section-active {
+            color: red;
+        }
+
+        .apply-button {
+            background-color: $base0;
+            color: #fff;
+            border-radius: 10px;
+            padding-left: 1em;
+            padding-right: 1em;
+        }
+
+        .apply-button:hover {
+            border-bottom: none;
+            background-color: $base1;
+            color: #fff;
+        }
+    }
+}
+
+@media screen and (min-width: $large-up) { // Large and up
+    .top-bar-left {
+        display: block !important;
+    }
+
+    .top-bar-right {
+        margin-right: calc(3em + 150px) !important; // Extra space for MLH banner
+    }
+}
+
+.section {
+    padding: 3em 1em;
+    // text-align: center;
+    justify-content: center;
+}
+
+@media screen and (min-width: $large-down) { // On large screens
+    .section {
+        padding: 3em calc((100% - 75em) / 2);
+    }
+}
+
+#section-landing {
+    //background-image: linear-gradient($base0, $base2);
+    background-image: url("../../img/Landing.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    width: 100%;
+    margin-bottom: 3em;
+    //height: 100vh;
+
+    h1 {
+        color: $textColorOnDark;
+        margin: 0;
+    }
+
+    h2 {
+        color: $textColorOnDark;
+    }
+    
+    h3 {
+        color: $textColorOnDark;
+    }
+
+    h4 {
+        color: $textColorOnDark;
+    }
+
+    p {
+        color: $textColorOnDark;
+    }
+
+    //@media screen and (min-width: 62.5em) { // On large screens
+    @media screen and (min-width: $large-up) { // On large screens
+        #animated-matrix {
+            margin-top: 2.5em;
+            margin-bottom: 3em;
+        }
+
+        .section {
+            padding-top: 0;
+        }
+
+        padding-bottom: 6em;
+    }
+}
+
+#section-countdown {
+    padding: 3em 0 4em 0;
+
+    #countdown-banner {
+        background-color: #006497;
+
+        .countdown-digit {
+            font-size: 48px;
+            // font-family: modern-sans;
+            color: #FFF;
+            text-align: center;
+            margin-top: 0.2em;
+        }
+    }
+
+    .countdown-padding {
+        padding: 0 calc((100% - 40em) / 2);
+    }
+}
+
+#section-about {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    margin-top: -120px;
+
+}
+
+#section-sponsorus {
+    padding-right: 0;
+}
+
+#section-faq {
+    //background-image: url("../../img/FAQ-Top.svg"), linear-gradient(#b9d2e2, #b9d2e2), url("../../img/FAQ-Bottom.svg");
+    //background-repeat: no-repeat, repeat, no-repeat;
+    //background-position: center top, center middle, center bottom;
+    //background-color: $base4;
+    width: 100%;
+
+    #faq-questions {
+        h4 {
+            text-align: left;
+            font-weight: bold;
+            margin-top: 25px;
+        }
+    
+        p {
+            text-align: left;
+        }
+    }
+
+    .accordion-title {
+        font-size: 22px;
+    }
+}
+.questions-div p{
+    margin-top: 2em;
+    text-align: center;
+}
+
+.grid-container {
+    padding: 0;
+}
+
+#section-sponsors {
+    .sponsors-graphic {
+        width: 100%;
+    }
+
+    .mlh-logo {
+        height: 100px;
+    }
+}
+
+@media screen and (min-width: 75em) { // On large screens
+    #section-sponsors {
+        .sponsors-graphic {
+            width: 70%;
+        }
+    }
+}
+
+#applyModal {
+    .form-error {
+        display: block;
+    }
+
+    .form-success {
+        color: $base0;
+        font-weight: bold;
+        text-align: center;
+    }
+}
+
+#loginModal {
+    .form-error {
+        display: block;
+    }
+
+    .user-login-error {
+        color: red;
+        text-align: center;
+    }
+}
+
+#footer {
+    background-color: #363636;
+    text-align: center;
+    color: #fff;
+
+    .contact-email {
+        color: #fff;
+        font-size: 20px;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    .ieee-logo {
+        height: 100px;
+        margin-top: 2em;
+        margin-bottom: 3em;
+    }
+
+    .social-logos {
+
+        img {
+            height: 60px;
+            margin: 1.25em 1.25em 0 1.25em
+        }
+    }
+}
+
+
+
+.email-style {
+    color: $base6;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.MiddleCircles {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.max-width {
+    width: 100%;
+    max-width: 1200px;
+}
+
+.pink-btn {
+    background-color:#FBBEAF;
+    font-weight: 500; 
+    color:#000000;
+    border-radius: 30px;
+    font-size: 18px;
+    padding: 8px 12px;
+    transition: color .3s;
+
+    &:hover {
+        background-color: #F07C91;
+        color:#fff;
+    }
+}
+
