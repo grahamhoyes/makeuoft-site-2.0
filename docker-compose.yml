@@ -1,0 +1,12 @@
+version: '3'
+services:
+   web:
+      restart: always
+      build:
+          context: .
+          dockerfile: ./Dockerfile
+      image: makeuoft-site:latest
+      ports:
+         - "8181:8181"
+      volumes:
+         - ./application:/application
