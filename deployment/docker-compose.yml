@@ -3,8 +3,8 @@ services:
    web:
       restart: always
       build:
-          context: .
-          dockerfile: ./Dockerfile
+          context: ..
+          dockerfile: ./deployment/Dockerfile
       image: makeuoft-site:latest
       ports:
          - "8181:8181"
