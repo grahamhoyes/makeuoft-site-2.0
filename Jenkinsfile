@@ -1,6 +1,7 @@
 pipeline {
   agent any
   environment {
+    DB_CREDENTIALS = credentials('DB_USER')
   }
   stages {
     stage('Build') {
