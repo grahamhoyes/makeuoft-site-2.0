@@ -20,7 +20,7 @@ pipeline {
 //          #Bring down the old container
           sh 'docker-compose -f deployment/docker-compose.yml down'
 //          #Bring up the new container
-          sh 'docker-compose -f deployment/docker-compose.yml up'
+          sh 'docker-compose -f deployment/docker-compose.yml up -d'
       }
     }
   }
