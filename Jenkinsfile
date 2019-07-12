@@ -6,9 +6,9 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-          #Delete existing docking image
+//          #Delete existing docking image
           sh 'docker rmi --force makeuoft-site:latest'
-          #Build new image
+//          #Build new image
           sh 'docker-compose -f deployment/docker-compose.yml build'
       }
     }
@@ -17,9 +17,9 @@ pipeline {
         branch "master"
       }
       steps {
-          #Bring down the old container
+//          #Bring down the old container
           sh 'docker-compose -f deployment/docker-compose.yml down'
-          #Bring up the new container
+//          #Bring up the new container
           sh 'docker-compose -f deployment/docker-compose.yml up'
       }
     }
