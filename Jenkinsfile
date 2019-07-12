@@ -1,10 +1,6 @@
 pipeline {
   agent any
   environment {
-    DB_HOST = credentials('PROD_DB_')
-    DB_PORT = 3306
-    DB_CREDENTIALS = credentials('DB_USER')
-    SECRET_KEY = credentials('SECRET_KEY')
   }
   stages {
     stage('Build') {
