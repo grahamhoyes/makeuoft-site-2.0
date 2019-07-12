@@ -13,7 +13,8 @@ pipeline {
           #Delete existing docking image
           docker rmi --force makeuoft-site:latest
           #Build new image
-          docker-compose -f deployment/docker-compose.yml build'''
+          docker-compose -f deployment/docker-compose.yml build
+        '''
       }
     }
     stage('Deploy') {
@@ -26,6 +27,7 @@ pipeline {
           docker-compose -f deployment/docker-compose.yml down
           #Bring up the new container
           docker-compose -f deployment/docker-compose.yml up
+        '''
       }
     }
   }
