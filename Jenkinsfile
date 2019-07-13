@@ -1,7 +1,10 @@
 pipeline {
   agent any
   environment {
-    DB_CREDENTIALS = credentials('DB_USER')
+    DB_CREDENTIALS = credentials('DB_USER_MAKEUOFT')
+    DB_NAME = credentials('DB_NAME_MAKEUOFT')
+    DB_SERVER = credentials('DB_SERVER_MAKEUOFT')
+    SECRET_KEY = credentials('SECRET_KEY_MAKEUOFT')
   }
   stages {
     stage('Build') {

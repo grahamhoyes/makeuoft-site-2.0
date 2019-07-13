@@ -10,3 +10,9 @@ services:
          - "8181:8181"
       volumes:
          - ./application:/application
+      environment:
+         - DB_USER_NAME=${DB_CREDENTIALS_USR}
+         - DB_USER_PW=${DB_CREDENTIALS_PSW}
+         - DB_NAME=${DB_NAME}
+         - SECRET_KEY=${SECRET_KEY}
+         - DB_SERVER=${DB_SERVER}

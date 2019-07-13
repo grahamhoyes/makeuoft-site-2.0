@@ -15,7 +15,9 @@ class Config(object):
 
     # Define the database - we are working with
     # SQLite for this example
-    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or 'sqlite:///' + os.path.join(BASE_DIR, 'app.db')
+    # For mysql: app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://username:password@localhost/db_name'
+    SQLALCHEMY_DATABASE_URI = 'mysql://' + os.environ.get('DB_USER_NAME') + ':' + os.environ.get('DB_USER_PW') + '@' os.environ.get('DB_SERVER') + '/' + os.environ.get('DB_NAME')
+    #SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(BASE_DIR, 'app.db')
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     DATABASE_CONNECT_OPTIONS = {}
 
@@ -30,10 +32,10 @@ class Config(object):
 
     # Use a secure, unique and absolutely secret key for
     # signing the data.
-    CSRF_SESSION_KEY = "secret"
+    #CSRF_SESSION_KEY = os.environ.get('CSRF_SECRET_KEY') or "secret"
 
     # Secret key for signing cookies
-    SECRET_KEY = "secret"
+    SECRET_KEY = os.environ.get('SECRET_KEY') or "secret"
 
     # OAuth Keys for Google Login
     #GOOGLE_CLIENT_ID=''
