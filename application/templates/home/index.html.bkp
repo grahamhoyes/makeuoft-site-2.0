@@ -30,7 +30,6 @@
         <!-- Landing page JS -->
         <script type="text/javascript" src="static/js/index.js"></script>
 
-
     </head>
     <body>
         <!-- MLH Banner -->
@@ -39,7 +38,7 @@
         <!-- Navbar -->
         <div class="title-bar" data-responsive-toggle="top-bar" data-hide-for="large">
             <button class="menu-icon" type="button" data-toggle="top-bar"></button>
-            <div class="title-bar-title"><a href="/makeuoft"><img id="title-bar-logo" src="static/img/CubeyBoi.svg"/></a></div>
+            <div class="title-bar-title"><a href="/"><img id="title-bar-logo" src="static/img/IEEELogo_Update_18-19_Vector_Blue.svg"/></a></div>
         </div>
 
         <div class="top-bar-container" id="top-bar" data-sticky-container>
@@ -69,8 +68,9 @@
         <section class="grid-x grid-padding-x section align-middle" id="section-landing">
             <div class="max-width">
                 <div class="cell small-12 large-6 small-order-1 medium-order-2 updatedAlignment">
-                    <h1 class="makeuoft-title">MakeUofT</h1>
-                    <h2 class="makeuoft-subtitle">Canada's Largest Makeathon</h2>
+                    <h1 style="font-size: 70px">MakeUofT</h1>
+                    <h2>Canada's Largest Makeathon</h2>
+
                     <div class="makeuoft-defn">
                         <img class="defn-term" src="static/img/MakeathonDefinition.svg">
                         <p class="defn-text">a hackathon where hardware-based projects are manifested</p>
@@ -80,7 +80,6 @@
 
                     <!--<h2>Registration closes on January 31!</h2>-->
                     <h4 class="stay-updated-title">Stay Updated!</h4>
-                    <!-- <p class="stay-updated-subtitle">Be the first one to know when applications open.</p> -->
                     <form id="mailing-list-top" class="mailing-list" method="POST">
                         <div class="stay-updated-container">
                         <input type="text" class="stay-updated" name="email" placeholder="sponsor@example.com">
@@ -118,8 +117,8 @@
         <a name="about" class="anchor"></a>
         <section class="grid-x section" id="section-about">
             <div class="cell small-12 large-12 max-width">
-                <h2 class="section-headings">About</h2>
-                <p>Join us at MakeUofT to transform your ideas into reality! In this 24-hour event, you and your team will build a project from scratch through the integration of hardware and software. Afterwards, you will present your project to a panel of industry judges to compete for prizes. This year, the theme for MakeUofT is <b>connectivity</b> and <b>machine learning</b> - including bluetooth, radio, internet, and anything else you can think of!</p>
+                <h1>About</h1>
+                <p>Join us at MakeUofT to transform your ideas into reality! In this 24-hour event, you and your team will build a project from scratch through the integration of hardware and software. Afterwards, you will present your project to a panel of industry judges to compete for prizes. This year, the theme for MakeUofT is <b>connectivity</b> - including bluetooth, radio, internet, and anything else you can think of!</p>
                 <p>Our makeathon is designed for everyone to participate, from beginners to experts. To help facilitate your learning experience, we will host workshops throughout the event featuring speakers from some of the top companies in the industry. The hardware and equipment are provided by us - just bring your laptop and ideas!</p>
             </div>
         </section>
@@ -127,7 +126,7 @@
         <a name="moments" class="anchor"></a>
         <section class="grid-x section" id="section-moments">
             <div class="updatedAlignment img-container">
-               <h2 class="section-headings">Moments from Last Year</h2><br><br>
+               <h1>Moments from Last Year</h1><br><br>
                <div class="container img-container" style="flex-direction: row-reverse">
                     <img src="static/img/lastyear/lastyear10.jpg" alt="" class="hover-img">
                     <img src="static/img/lastyear/lastyear1.jpg" alt="" class="hover-img">
@@ -149,10 +148,10 @@
         <a name="become-sponsor" class="anchor"></a>
         <section class="grid-x section" id="section-sponsorus">
              <div class="sponsor-us">
-                <h2 class="section-headings">Want to Sponsor Us?</h2>
-                <p>We wouldn’t be able to provide this event to students without the support of our sponsors!</p>
+                  <h2 class="section-headings">Want to Sponsor Us?</h2>
+                  <p>We wouldn’t be able to provide this event to students without the support of our sponsors!</p>
 
-                <p>If you would like to sponsor us, feel free to reach out to our email:  <a class="email-style" href="mailto:makeuoft@gmail.com">makeuoft@gmail.com</a></p>
+                  <p>If you would like to sponsor us, feel free to reach out to our email:  <a class="email-style" href="mailto:makeuoft@gmail.com">makeuoft@gmail.com</a></p>
                  <!--<h2>Registration closes on January 31!</h2>-->
                  <br>
 		 <center><a href="mailto:makeuoft@gmail.com" class="pink-btn">Become a Sponsor</a></center>
@@ -166,7 +165,7 @@
         <section class="grid-x" id="section-faq">
             <div class="section">
                 <div class="cell small-12">
-                    <h2 class="section-headings">FAQ</h2>
+                    <h1>FAQ</h1>
                 </div>
                 <div class="grid-x grid-padding-x" id="faq-questions">
                     <div class="cell small-12 large-6">
@@ -223,7 +222,7 @@
 
 
                          <h4>Are you providing <span style="color:#FF8D00">travel reimbursements</span>?</h4>
-                         <p>Unfortunately, we will not be able to provide travel reimbursements at MakeUofT 2020 - but look out for MakeUofT 2021 to see if this changes in the future!</p>
+                         <p>Unfortunately, we will not be able to provide travel reimbursements at MakeUofT 2019 - but look out for MakeUofT 2020 to see if this changes in the future!</p>
 
                     </div>
                 </div>
@@ -235,8 +234,8 @@
 
         <a name="stay-updated" class="anchor"></a>
         <section class="grid-x section" id="section-sponsorbtn">
-                <h1 class="section-headings">Stay Updated</h1><br>
-                <form id="mailing-list-bottom" class="mailing-list" method="POST">
+               <h1 class="section-headings">Stay Updated</h1><br><br>
+               <form id="mailing-list-bottom" class="mailing-list" method="POST">
                     <div class="stay-updated-container">
                     <input type="text" class="stay-updated" name="email" placeholder="sponsor@example.com">
                     <button type="submit" class="btn">

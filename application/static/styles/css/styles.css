@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Source Sans Pro", sans-serif; }
 
@@ -35,11 +41,64 @@ a.anchor {
 .landing-img {
   width: 40%;
 }
+/* Start of text on landing */
 
-.updated-title {
+.makeuoft-title {
   font-weight: bold;
-  margin-top: 4rem;
+  font-size: 62px;
+  letter-spacing: 2px;
+  color: #FFFFFF;
 }
+.makeuoft-subtitle {
+  font-weight: 500;
+  font-size: 28px;
+  letter-spacing: 4px;
+}
+
+.makeuoft-defn {
+  display: flex;
+  margin-bottom: 10px;
+}
+.defn-term {
+  height: 32px;
+  margin-top: 2px;
+  margin-right: 2px;
+  display: inline-block;
+}
+.defn-text {
+  font-size: 21px;
+  letter-spacing: 2px;
+  text-align: left !important;
+}
+
+.date-text {
+  font-weight: 600;
+  font-size: 24px;
+  letter-spacing: 2px;
+}
+.stay-updated-title {
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+/* End of text on landing */
+
+.section-headings {
+  font-weight: bold;
+  font-size: 42px;
+  text-align: center;
+  letter-spacing: 4px;
+  color: #4A4A4A;
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+  .section-headings {
+    font-size: 32px;
+    letter-spacing: 2px;
+  }
+}
+
 
 /* START of moments from last year carousel*/
 #section-moments {
@@ -161,11 +220,11 @@ a.anchor {
       margin-bottom: 3px;
       color: inherit; }
     .top-bar .top-bar-right a:hover {
-      border-bottom: 3px solid #2CA0AF;
-      color: #2CA0AF;
+      border-bottom: 3px solid #ffa21b;
+      color: #ffa21b;
       margin-bottom: 0; }
     .top-bar .top-bar-right .section-active {
-      color: red; }
+      color: #ffa21b; }
     .top-bar .top-bar-right .apply-button {
       background-color: #00639c;
       color: #fff;
@@ -302,6 +361,7 @@ a.anchor {
   align-items: center;
   width: 50%;
 }
+.MiddleCircles img { width: 90%; }
 
 @media only screen and (max-width: 800px) {
   #section-sponsorus {
@@ -347,7 +407,8 @@ align-items: center;}
     text-align: left;
     font-weight: bold; }
   #section-faq #faq-questions p {
-    text-align: left; }
+    text-align: left;
+    margin-bottom: 25px; }
   #section-faq .accordion-title {
     font-size: 22px; }
 .questions-div p {
@@ -456,7 +517,7 @@ button.radius, .button.radius {
 
 
 .email-style {
-  color: #F6AA58;
+  color: #ffa21b;
   text-decoration: underline;
   font-weight: bold;
 }
@@ -477,7 +538,7 @@ button.radius, .button.radius {
   max-width: 200px;
   text-align: center;}
   .pink-btn:hover {
-      background-color: #F07C91;
+      background-color: #D86D66;
       color:#fff;
   }
 
@@ -513,6 +574,8 @@ button.radius, .button.radius {
   #footer .contact-email {
     color: #fff;
     font-size: 20px; }
+  #footer .contact-email:hover {
+    color: #ffa21b;}
   #footer p {
     margin: 0; }
   #footer .ieee-logo {

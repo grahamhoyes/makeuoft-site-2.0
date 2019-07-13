@@ -166,28 +166,29 @@ $(document).ready(function() {
     $('[data-reveal]').on('closed.zf.reveal', () => {
         window.location.hash = '';
     })
+	
+	
 
-
-
-
+	
 	// Form submission
     $('.mailing-list').submit(function(e) {
         e.preventDefault();
 		var form = $(this);
 		var email = form.find('input[name="email"]').val()
         var data = {'email': email}
-        $.post('mailinglist', data, function(result) {
-            console.log(result);
+        $.post('mailinglist.php', data, function(res) {
+            console.log(res);
             try {
-                if (result['success']) {
-                    alert(result['message']);
-                } else {
-                    alert(result['error']);
-                }
+                result = JSON.parse(res);
             } catch (e) {
                 alert('Error: ' + e.message);
             }
 
+            if (result['success']) {
+                alert(result['message']);
+            } else {
+                alert(result['error']);
+            }
         });
     });
 });
