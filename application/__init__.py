@@ -6,6 +6,10 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from config import Config
 
+# Initialize pymysql for mysql support in deployment
+import pymysql
+pymysql.install_as_MySQLdb()
+
 
 # Initialize the database instance for storing all the information
 db = SQLAlchemy()

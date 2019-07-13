@@ -6,13 +6,15 @@ services:
           context: ..
           dockerfile: ./deployment/Dockerfile
       image: makeuoft-site:latest
+      command: gunicorn main:flask_app --bind 0.0.0.0:8181
       ports:
          - "8181:8181"
       volumes:
          - ./application:/application
+         - /var/run/mysqld/mysqld.sock:/run/mysqld/mysqld.sock
       environment:
-         - DB_USER_NAME=${DB_CREDENTIALS_USR}
-         - DB_USER_PW=${DB_CREDENTIALS_PSW}
-         - DB_NAME=${DB_NAME}
-         - SECRET_KEY=${SECRET_KEY}
-         - DB_SERVER=${DB_SERVER}
+         - DB_USER_NAME=makeuoftsite
+         - DB_USER_PW=wRln2SiQ6*UswiZe+Or$$
+         - DB_NAME=makeuoft
+         - SECRET_KEY=secret
+         - DB_SERVER=localhost

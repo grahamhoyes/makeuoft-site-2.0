@@ -176,18 +176,16 @@ $(document).ready(function() {
 		var form = $(this);
 		var email = form.find('input[name="email"]').val()
         var data = {'email': email}
-        $.post('mailinglist.php', data, function(res) {
-            console.log(res);
+        $.post('mailinglist', data, function(result) {
+            console.log(result);
             try {
-                result = JSON.parse(res);
+                if (result['success']) {
+                    alert(result['message']);
+                } else {
+                    alert(result['error']);
+                }
             } catch (e) {
                 alert('Error: ' + e.message);
-            }
-
-            if (result['success']) {
-                alert(result['message']);
-            } else {
-                alert(result['error']);
             }
         });
     });

@@ -9,6 +9,7 @@ RUN apk --update add --virtual build-dependencies libffi-dev openssl-dev python-
   && pip install gunicorn \
   && apk del build-dependencies
 
+RUN pip install pymysql
 COPY ./application application
 COPY ./migrations migrations
 COPY ./main.py ./config.py ./boot.sh ./
@@ -19,5 +20,3 @@ ENV FLASK_APP main.py
 
 
 EXPOSE 8181
-
-ENTRYPOINT ["./boot.sh"]

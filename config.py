@@ -16,8 +16,9 @@ class Config(object):
     # Define the database - we are working with
     # SQLite for this example
     # For mysql: app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://username:password@localhost/db_name'
-    SQLALCHEMY_DATABASE_URI = 'mysql://' + os.environ.get('DB_USER_NAME') + ':' + os.environ.get('DB_USER_PW') + '@' os.environ.get('DB_SERVER') + '/' + os.environ.get('DB_NAME')
+    #SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://' + os.environ.get('DB_USER_NAME') + ':' + os.environ.get('DB_USER_PW') + '@' + os.environ.get('DB_SERVER') + ':3306/' + os.environ.get('DB_NAME')
     #SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(BASE_DIR, 'app.db')
+    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://{}:{}@{}:3306/{}?unix_socket=/run/mysqld/mysqld.sock'.format(os.environ['DB_USER_NAME'], os.environ['DB_USER_PW'], os.environ['DB_SERVER'], os.environ['DB_NAME'])
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     DATABASE_CONNECT_OPTIONS = {}
 
