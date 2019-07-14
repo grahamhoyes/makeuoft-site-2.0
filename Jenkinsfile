@@ -5,6 +5,7 @@ pipeline {
     DB_NAME = credentials('DB_NAME_MAKEUOFT')
     DB_SERVER = credentials('DB_SERVER_MAKEUOFT')
     SECRET_KEY = credentials('SECRET_KEY_MAKEUOFT')
+    ENVIRONMENT = credentials('ENVIRONMENT')
   }
   stages {
     stage('Build') {
