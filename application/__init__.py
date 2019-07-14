@@ -4,12 +4,13 @@ from flask import Flask, render_template
 # Import SQLAlchemy and Migrate
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
-from config import Config
+from config import DevelopmentConfig, ProductionConfig
 
 # Initialize pymysql for mysql support in deployment
 import pymysql
 pymysql.install_as_MySQLdb()
 
+import os
 
 # Initialize the database instance for storing all the information
 db = SQLAlchemy()
@@ -22,9 +23,17 @@ migrate = Migrate()
  Encapsulate the app in a function in order to be able to initialize it with
  various environment variables for  testing as well as versatility
 """
-def create_app(config_class=Config):
+def create_app():
+    # Change to production configuration if in production
+    if(os.environ['ENVIRONMENT'] == 'PRODUCTION'):
+        config_class=ProductionConfig()
+    else:
+        config_class=DevelopmentConfig()
+
+
     # Define the application object
     flask_app = Flask(__name__)
+
 
     # Configurations taken from function argument
     flask_app.config.from_object(config_class)
