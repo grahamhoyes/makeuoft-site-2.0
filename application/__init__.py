@@ -31,7 +31,7 @@ def create_app():
     # Change to production configuration if in production
     if(os.environ['ENVIRONMENT'] == 'PRODUCTION'):
         config_class=ProductionConfig()
-        flask_app.wsgi_app = PrefixMiddleware(flask_app.wsgi_app, prefix='/makeuoft')
+        flask_app.wsgi_app = PrefixMiddleware(flask_app.wsgi_app, prefix='makeuoft')
 
     else:
         config_class=DevelopmentConfig()
