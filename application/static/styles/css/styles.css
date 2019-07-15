@@ -12,17 +12,12 @@ h1 {
     text-align: center;
     font-weight: bold;
 }
-h2 {
-  /* text-align: center;} */ }
 h3 {
   font-size: 30px; }
-
 h4 {
-  font-size: 20px;
-  }
+  font-size: 20px; }
 p {
-  font-size: 19px; 
-}
+  font-size: 19px; }
 
 .button {
   background-color: #2CA0AF; }
@@ -57,7 +52,7 @@ a.anchor {
 
 .makeuoft-defn {
   display: flex;
-  margin-bottom: 10px;
+  margin: 10px 0;
 }
 .defn-term {
   height: 32px;
@@ -96,6 +91,17 @@ a.anchor {
   .section-headings {
     font-size: 32px;
     letter-spacing: 2px;
+  }
+
+  .makeuoft-defn {
+    display: block;
+  }
+
+  .defn-text {
+    line-height: 34px;
+  }
+  .defn-term {
+    float: left;
   }
 }
 
