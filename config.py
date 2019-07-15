@@ -34,8 +34,6 @@ class ProductionConfig(object):
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     DATABASE_CONNECT_OPTIONS = {}
 
-    SCRIPT_NAME = "/makeuoft"
-
     # Application threads. A common general assumption is
     # using 2 per available processor cores - to handle
     # incoming requests using one and performing background
