@@ -4,7 +4,7 @@ from flask import Flask, render_template
 # Import SQLAlchemy and Migrate
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
-from config import DevelopmentConfig, ProductionConfig, PrefixMiddleware
+from config import DevelopmentConfig, ProductionConfig
 
 # Initialize pymysql for mysql support in deployment
 import pymysql
@@ -31,13 +31,8 @@ def create_app():
     # Change to production configuration if in production
     if(os.environ['ENVIRONMENT'] == 'PRODUCTION'):
         config_class=ProductionConfig()
-        flask_app.wsgi_app = PrefixMiddleware(flask_app.wsgi_app, prefix='makeuoft')
-
     else:
         config_class=DevelopmentConfig()
-
-
-
 
 
     # Configurations taken from function argument
