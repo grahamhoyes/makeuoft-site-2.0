@@ -52,6 +52,7 @@ a.anchor {
   display: flex;
   flex-direction: column;
   align-items: start;
+  color: white;
   width: 50%;}
 
 .landing-img {
