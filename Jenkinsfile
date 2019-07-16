@@ -21,7 +21,7 @@ pipeline {
         branch "master"
       }
       steps {
-            #Copy static files
+//          #Copy static files
           sh 'rm -r /var/www/makeuoft/public_html/static/'
           sh 'cp -r application/static /var/www/makeuoft/public_html/static'
 //          #Bring down the old container
