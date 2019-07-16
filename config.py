@@ -33,8 +33,7 @@ class ProductionConfig(object):
         SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://{}:{}@{}:3306/{}?unix_socket=/run/mysqld/mysqld.sock'.format(os.environ['DB_USER_NAME'], os.environ['DB_USER_PW'], os.environ['DB_SERVER'], os.environ['DB_NAME'])
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     DATABASE_CONNECT_OPTIONS = {}
-    SERVER_NAME='ieee.utoronto.ca'
-    APPLICATION_ROOT='/makeuoft'
+    
     # Application threads. A common general assumption is
     # using 2 per available processor cores - to handle
     # incoming requests using one and performing background
