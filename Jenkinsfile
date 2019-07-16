@@ -25,6 +25,7 @@ pipeline {
           sh 'docker-compose -f deployment/docker-compose.yml down'
 //          #Bring up the new container
           sh 'docker-compose -f deployment/docker-compose.yml up -d'
+          sh 'cp -r application/static /var/www/makeuoft/public_html/static'
       }
     }
   }
