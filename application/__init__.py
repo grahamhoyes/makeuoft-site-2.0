@@ -25,14 +25,16 @@ migrate = Migrate()
 """
 def create_app():
     # Define the application object
-    flask_app = Flask(__name__)
 
 
     # Change to production configuration if in production
     if(os.environ['ENVIRONMENT'] == 'PRODUCTION'):
+        flask_app = Flask(__name__, static_path = '/makeuoft/static')
         config_class=ProductionConfig()
     else:
+        flask_app = Flask(__name__)
         config_class=DevelopmentConfig()
+
 
 
     # Configurations taken from function argument
