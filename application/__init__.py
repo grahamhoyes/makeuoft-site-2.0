@@ -29,7 +29,7 @@ def create_app():
 
     # Change to production configuration if in production
     if(os.environ['ENVIRONMENT'] == 'PRODUCTION'):
-        flask_app = Flask(__name__, static_url_path = '/makeuoft/static')
+        flask_app = Flask(__name__, static_folder = '/makeuoft/static')
         config_class=ProductionConfig()
     else:
         flask_app = Flask(__name__)
