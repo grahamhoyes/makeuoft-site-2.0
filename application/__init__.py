@@ -6,8 +6,6 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from config import DevelopmentConfig, ProductionConfig
 
-from werkzeug.wsgi import DispatcherMiddleware
-
 # Initialize pymysql for mysql support in deployment
 import pymysql
 pymysql.install_as_MySQLdb()
@@ -29,7 +27,6 @@ def create_app():
     # Define the application object
     flask_app = Flask(__name__)
 
-    flask_app.wsgi_app = DispatcherMiddleware(None, {'/makeuoft': flask_app.wsgi_app})
 
     # Change to production configuration if in production
     if(os.environ['ENVIRONMENT'] == 'PRODUCTION'):
