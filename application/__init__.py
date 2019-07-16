@@ -5,7 +5,8 @@ from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from config import DevelopmentConfig, ProductionConfig
-from werkzeug.contrib.fixers import ProxyFix
+
+from werkzeug.wsgi import DispatcherMiddleware
 
 # Initialize pymysql for mysql support in deployment
 import pymysql
@@ -27,8 +28,8 @@ migrate = Migrate()
 def create_app():
     # Define the application object
     flask_app = Flask(__name__)
-    flask_app.wsgi_app = ProxyFix(flask_app.wsgi_app)
 
+    flask_app.wsgi_app = DispatcherMiddleware(None, {'/makeuoft': flask_app.wsgi_app})
 
     # Change to production configuration if in production
     if(os.environ['ENVIRONMENT'] == 'PRODUCTION'):
