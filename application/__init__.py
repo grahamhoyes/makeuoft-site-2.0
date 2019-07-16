@@ -24,15 +24,17 @@ migrate = Migrate()
  various environment variables for  testing as well as versatility
 """
 def create_app():
+    # Define the application object
+
+
     # Change to production configuration if in production
     if(os.environ['ENVIRONMENT'] == 'PRODUCTION'):
+        flask_app = Flask(__name__, static_folder = '/makeuoft/static')
         config_class=ProductionConfig()
     else:
+        flask_app = Flask(__name__)
         config_class=DevelopmentConfig()
 
-
-    # Define the application object
-    flask_app = Flask(__name__)
 
 
     # Configurations taken from function argument
