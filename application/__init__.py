@@ -61,6 +61,7 @@ def create_app():
 
     flask_app.register_blueprint(home_module)
 
+
     return flask_app
 
 from application import db_models
