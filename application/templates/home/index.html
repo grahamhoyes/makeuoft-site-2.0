@@ -21,7 +21,7 @@
 
         <!-- Foundation CSS -->
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/css/foundation.min.css') }}"/>
-        <link rel="stylesheet" type="text/css" href="static/styles/css/app.css" />
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/css/app.css') }}" />
         <!-- Site CSS -->
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/css/styles.css') }}" />
         <!-- Google Fonts -->
@@ -39,14 +39,14 @@
         <!-- Navbar -->
         <div class="title-bar" data-responsive-toggle="top-bar" data-hide-for="large">
             <button class="menu-icon" type="button" data-toggle="top-bar"></button>
-            <div class="title-bar-title"><a href="/makeuoft"><img id="title-bar-logo" src="static/img/CubeyBoi.svg"/></a></div>
+            <div class="title-bar-title"><a href="/makeuoft"><img id="title-bar-logo" src="{{ url_for('static', filename='img/CubeyBoi.svg') }}"/></a></div>
         </div>
 
         <div class="top-bar-container" id="top-bar" data-sticky-container>
             <div class="sticky top-bar" data-sticky data-options="marginTop: 0;" data-top-anchor="1">
                 <div class="top-bar-left">
                     <ul class="menu">
-                        <li><a href="/makeuoft/"><img src="static/img/CubeyBoi.svg" /></a></li>
+                        <li><a href="/makeuoft/"><img src="{{ url_for('static', filename='img/CubeyBoi.svg') }}" /></a></li>
                     </ul>
                 </div>
                 <nav class="top-bar-right">
@@ -72,7 +72,7 @@
                     <h1 class="makeuoft-title">MakeUofT</h1>
                     <h2 class="makeuoft-subtitle">Canada's Largest Makeathon</h2>
                     <div class="makeuoft-defn">
-                        <img class="defn-term" src="static/img/MakeathonDefinition.svg">
+                        <img class="defn-term" src="{{ url_for('static', filename='img/MakeathonDefinition.svg') }}">
                         <p class="defn-text">a hackathon where hardware-based projects are manifested</p>
                     </div>
 
@@ -96,7 +96,7 @@
                     </form>
                 </div>
                 <div class="landing-img">
-                    <img src="static/img/MachineTopImage.svg">
+                    <img src="{{ url_for('static', filename='img/MachineTopImage.svg') }}">
                 </div>
             </div>
 
@@ -127,19 +127,19 @@
             <div class="updatedAlignment img-container">
                <h2 class="section-headings">Moments from Last Year</h2><br><br>
                <div class="container img-container" style="flex-direction: row-reverse">
-                    <img src="static/img/lastyear/lastyear10.jpg" alt="" class="hover-img">
-                    <img src="static/img/lastyear/lastyear1.jpg" alt="" class="hover-img">
-                    <img src="static/img/lastyear/lastyear2.jpg" alt="" class="hover-img">
-                    <img src="static/img/lastyear/lastyear3.jpg" alt="" class="hover-img">
+                    <img src="{{ url_for('static', filename='img/lastyear/lastyear10.jpg') }}" alt="" class="hover-img">
+                    <img src="{{ url_for('static', filename='img/lastyear/lastyear1.jpg') }}" alt="" class="hover-img">
+                    <img src="{{ url_for('static', filename='img/lastyear/lastyear2.jpg') }}" alt="" class="hover-img">
+                    <img src="{{ url_for('static', filename='img/lastyear/lastyear3.jpg') }}" alt="" class="hover-img">
                     <!-- <img src="static/img/lastyear/lastyear4.jpg" alt="" class="hover-img"> -->
-                    <img src="static/img/lastyear/lastyear5.jpg" alt="" class="hover-img">
+                    <img src="{{ url_for('static', filename='img/lastyear/lastyear5.jpg') }}" alt="" class="hover-img">
                     <!-- <img src="static/img/lastyear/lastyear6.jpg" alt="" class="hover-img"> -->
                     <!-- <img src="static/img/lastyear/lastyear7.jpg" alt="" class="hover-img"> -->
                     <!-- <img src="static/img/lastyear/lastyear8.jpg" alt="" class="hover-img"> -->
-                    <img src="static/img/lastyear/lastyear12.jpg" alt="" class="hover-img">
-                    <img src="static/img/lastyear/lastyear13.jpg" alt="" class="hover-img">
-                    <img src="static/img/lastyear/lastyear11.jpg" alt="" class="hover-img">
-                    <img src="static/img/lastyear/lastyear9.jpg" alt="" class="hover-img left">
+                    <img src="{{ url_for('static', filename='img/lastyear/lastyear12.jpg') }}" alt="" class="hover-img">
+                    <img src="{{ url_for('static', filename='img/lastyear/lastyear13.jpg') }}" alt="" class="hover-img">
+                    <img src="{{ url_for('static', filename='img/lastyear/lastyear11.jpg') }}" alt="" class="hover-img">
+                    <img src="{{ url_for('static', filename='img/lastyear/lastyear9.jpg') }}" alt="" class="hover-img left">
                </div>
             </div>
         </section>
@@ -156,7 +156,7 @@
                 <a href="mailto:makeuoft@gmail.com" class="pink-btn">Become a Sponsor</a>
              </div>
              <div class="MiddleCircles">
-                 <img src="static/img/MiddleCircles.svg">
+                 <img src="{{ url_for('static', filename='img/MiddleCircles.svg') }}">
              </div>
         </section>
 
@@ -258,10 +258,10 @@
             <h2 class="section-headings" style="color:white">Contact Us</h2>
             <p><a class="contact-email" href="mailto:makeuoft@gmail.com">makeuoft@gmail.com</a></p>
             <div class="social-logos">
-                <a href="https://www.facebook.com/ieeeuoft/"><img src="static/img/Facebook-Logo.svg"></a>
-                <a href="https://www.instagram.com/ieee_uoft/"><img src="static/img/Instagram-Logo.svg"></a>
+                <a href="https://www.facebook.com/ieeeuoft/"><img src="{{ url_for('static', filename='img/Facebook-Logo.svg') }}"></a>
+                <a href="https://www.instagram.com/ieee_uoft/"><img src="{{ url_for('static', filename='img/Instagram-Logo.svg') }}"></a>
             </div>
-            <a href="/"><img src="static/img/IEEELogo_Update_18-19_Vector_White.svg" class="ieee-logo"></a>
+            <a href="/"><img src="{{ url_for('static', filename='img/IEEELogo_Update_18-19_Vector_White.svg') }}" class="ieee-logo"></a>
             <p>Copyright &#169 2019 IEEE University of Toronto Student Branch</p>
             <!--p>As an MLH member event, we expect all event participants and organizers to abide by the <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf">MLH Code of Conduct</a>.</p-->
         </div>
