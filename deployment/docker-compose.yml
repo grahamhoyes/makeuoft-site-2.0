@@ -19,3 +19,4 @@ services:
          - SECRET_KEY=${SECRET_KEY}
          - DB_SERVER=${DB_SERVER}
          - ENVIRONMENT=${ENVIRONMENT}
+         - APPLICATION_ROOT=/makeuoft
