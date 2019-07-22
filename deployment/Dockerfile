@@ -10,6 +10,7 @@ RUN apk --update add --virtual build-dependencies libffi-dev openssl-dev python-
   && apk del build-dependencies
 
 RUN pip install pymysql
+RUN pip install flask-reverse-proxy-fix
 COPY ./application application
 COPY ./migrations migrations
 COPY ./main.py ./config.py ./boot.sh ./

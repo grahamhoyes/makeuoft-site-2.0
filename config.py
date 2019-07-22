@@ -34,7 +34,7 @@ class ProductionConfig(object):
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     DATABASE_CONNECT_OPTIONS = {}
 
-    APPLICATION_ROOT='/makeuoft'
+    REVERSE_PROXY_PATH='/makeuoft'
 
     # Application threads. A common general assumption is
     # using 2 per available processor cores - to handle
