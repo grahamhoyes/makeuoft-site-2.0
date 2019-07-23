@@ -12,7 +12,7 @@
 
     <title>User Application</title>
 </head>
-<body>
+<body class="application-body">
     <header class="form-header">
         <a href="/makeuoft/"><img class="form-header-logo" src="{{ url_for('static', filename='img/CubeyBoi.svg') }}"/></a>
     </header>
@@ -27,12 +27,12 @@
                 <h2>Personal</h2>
 
                 <div class="application-div-inputs">
-                    <div class="input-div">
+                    <div class="input-div input-width-third">
                         <label for="firstName">First Name</label>
                         {{ form.firstName(type="firstName", id="firstName") }}
                     </div>
     
-                    <div class="input-div">
+                    <div class="input-div input-width-third">
                         <label for="lastName">Last Name</label>
                         {{ form.lastName(type="lastName", id="lastName") }}
                     </div>
@@ -42,12 +42,12 @@
                         {{ form.birthday(type="birthday", id="birthday") }}
                     </div>
     
-                    <div class="input-div">
+                    <div class="input-div input-width-third">
                         <label for="gender">Gender</label>
                         {{ form.gender(type="gender", id="gender") }}
                     </div>
     
-                    <div class="input-div">
+                    <div class="input-div input-width-third">
                         <label for="ethnicity">Ethnicity</label>
                         {{ form.ethnicity(type="ethnicity", id="ethnicity") }}
                     </div>
@@ -58,12 +58,12 @@
                 <h2>Contact</h2>
 
                 <div class="application-div-inputs">
-                    <div class="input-div">
+                    <div class="input-div input-width-half">
                         <label for="email">Email</label>
                         {{ form.email(type="email", id="email") }}
                     </div>
 
-                    <div class="input-div">
+                    <div class="input-div input-width-third">
                         <label for="phoneNumber">Phone Number</label>
                         {{ form.phoneNumber(type="phoneNumber", id="phoneNumber") }}
                     </div>
@@ -74,17 +74,17 @@
                 <h2>Education</h2>
 
                 <div class="application-div-inputs">
-                    <div class="input-div">
+                    <div class="input-div input-width-60">
                         <label for="school">School</label>
                         {{ form.school(type="school", id="school") }}
                     </div>
 
-                    <div class="input-div">
+                    <div class="input-div input-width-third">
                         <label for="program">Program of Study</label>
                         {{ form.program(type="program", id="program") }}
                     </div>
 
-                    <div class="input-div">
+                    <div class="input-div input-width-third">
                         <label for="graduation">Expected Graduation Year</label>
                         {{ form.graduation(type="graduation", id="graduation") }}
                     </div>
@@ -95,7 +95,7 @@
                 <h2>Resume</h2>
 
                 <div class="application-div-inputs">
-                    <div class="input-div">
+                    <div class="input-div input-width-full">
                         <label for="resume">Resume</label>
                         {{ form.resume(type="resume", id="resume") }}
                     </div>
@@ -106,17 +106,17 @@
                 <h2>Questions</h2>
 
                 <div class="application-div-inputs">
-                    <div class="input-div">
+                    <div class="input-div input-width-full">
                         <label for="q1">Have you ever been to a hackathon/makeathon before? Tell us briefly about it.</label>
                         {{ form.q1(type="q1", id="q1") }}
                     </div>
 
-                    <div class="input-div">
+                    <div class="input-div input-width-full">
                         <label for="q2">Why do you want to participate at MakeUofT?</label>
                         {{ form.q2(type="q2", id="q2") }}
                     </div>
 
-                    <div class="input-div">
+                    <div class="input-div input-width-full">
                         <label for="q3">Tell us about your experience with hardware! </label>
                         {{ form.q3(type="q3", id="q3") }}
                     </div>
@@ -154,16 +154,10 @@
             </div>
 
             <div class="form-btn-div">
-                <button class="submit">Save</button>
-                <button class="submit">Submit Application</button>
+                <button class="submit black-outline-btn">Save</button>
+                <button class="submit pink-btn">Submit Application</button>
             </div>
-
-           
         </form>
-
-        <button type="submit" form="login-form" class="submit-btn">Sign In</button>
-        <!-- </div> -->
-
     </div>
 
 </body>

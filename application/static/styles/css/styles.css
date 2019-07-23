@@ -315,6 +315,19 @@ a.anchor {
     color:#fff;
 }
 
+.black-outline-btn {
+  background-color: none;
+  font-weight: 600;
+  color:#000000;
+  border-radius: 30px;
+  font-size: 18px;
+  padding: 8px 18px;
+  transition: color .3s;
+  max-width: 150px;
+  text-align: center;
+  align-self: center;
+}
+
 /* End of WANT TO SPONSOR US? */
 
 
@@ -737,7 +750,7 @@ button.radius, .button.radius {
 }
 
 .login-form h1 {
-    font-family: Source Sans Pro;
+
     font-weight: bold;
     font-size: 32px;
     line-height: 40px;
@@ -755,7 +768,7 @@ button.radius, .button.radius {
     flex-direction: column;
 }
 .login-form label {
-    font-family: Source Sans Pro;
+
     font-size: 14px;
     /* line-height: 14px; */
     color: #000000;
@@ -877,3 +890,97 @@ button.radius, .button.radius {
 }
 
 /* END OF REGISTER PAGE FORM */
+
+
+/* START OF APPLICATION PAGE FORM */
+.application-body {
+  background: linear-gradient(130.14deg, #48A0AF 9.68%, #3386BA 87.5%);
+}
+
+.application-div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.application-div h2 {
+  font-weight: 300;
+  font-size: 19px;
+  line-height: 24px;
+  text-align: right;
+  letter-spacing: 2.44286px;
+  color: #000000;
+  width: 101px;
+}
+
+.application-div-inputs {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.input-width-third {
+  width: 33%;
+  margin-right: 20px;
+}
+.input-width-half {
+  width: 50%;
+  margin-right: 20px;
+}
+
+.input-width-full {
+  width: 100%;
+}
+
+.input-width-60 {
+  width: 60%;
+  margin-right: 20px;
+}
+
+.form-checkbox-div {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.form-checkbox-div label {
+  font-size: 14px;
+  line-height: 18px;
+  color: #666666;
+}
+
+.form-checkbox-div a, .form-checkbox-div a:active {
+  color: #3A8EB7;
+  text-decoration: none;
+}
+
+.form-checkbox-div a:hover {
+  text-decoration: underline;
+}
+
+
+/* 
+.checkbox-style {
+  top: 0;
+  left: 0;
+  height: 12px;
+  width: 12px;
+  border: 0.8px solid #979797;
+  box-sizing: border-box;
+  border-radius: 0.8px;
+}
+
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.container input:checked ~ .checkmark {
+  background-color: #3D92B5;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+} */
+
+
+/* END OF APPLICATION PAGE FORM */
