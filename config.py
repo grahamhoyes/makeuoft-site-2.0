@@ -34,8 +34,6 @@ class ProductionConfig(object):
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     DATABASE_CONNECT_OPTIONS = {}
 
-    APPLICATION_ROOT='/makeuoft'
-
     # Application threads. A common general assumption is
     # using 2 per available processor cores - to handle
     # incoming requests using one and performing background
@@ -64,3 +62,27 @@ class ProductionConfig(object):
 
     # Publishable key for Stripe Payment API (note that if the env. variable is not found, it will use the other default value)
     #STRIPE_PUBLISHABLE_KEY =  os.environ.get('STRIPE_PUBLISHABLE_KEY') or
+
+# ReverseProxied Configurations for app mounting to subdomain (i.e., /makeuoft)
+class ReverseProxied(object):
+
+    def __init__(self, app, script_name=None, scheme=None, server=None):
+        self.app = app
+        self.script_name = script_name
+        self.scheme = scheme
+        self.server = server
+
+    def __call__(self, environ, start_response):
+        script_name = environ.get('HTTP_X_SCRIPT_NAME', '') or self.script_name
+        if script_name:
+            environ['SCRIPT_NAME'] = script_name
+            path_info = environ['PATH_INFO']
+            if path_info.startswith(script_name):
+                environ['PATH_INFO'] = path_info[len(script_name):]
+        scheme = environ.get('HTTP_X_SCHEME', '') or self.scheme
+        if scheme:
+            environ['wsgi.url_scheme'] = scheme
+        server = environ.get('HTTP_X_FORWARDED_SERVER', '') or self.server
+        if server:
+            environ['HTTP_HOST'] = server
+        return self.app(environ, start_response)
