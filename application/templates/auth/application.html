@@ -29,27 +29,42 @@
                 <div class="application-div-inputs">
                     <div class="input-div input-width-third">
                         <label for="firstName">First Name</label>
-                        {{ form.firstName(type="firstName", id="firstName") }}
+                        {{ form.first_name(type="text", id="firstName") }}
                     </div>
+<<<<<<< HEAD
     
                     <div class="input-div input-width-third">
+=======
+
+                    <div class="input-div">
+>>>>>>> 66c147095b4fd25263ea3ab5327b524b09d6e268
                         <label for="lastName">Last Name</label>
-                        {{ form.lastName(type="lastName", id="lastName") }}
+                        {{ form.last_name(type="text", id="lastName") }}
                     </div>
-    
+
                     <div class="input-div">
                         <label for="birthday">Birthday</label>
-                        {{ form.birthday(type="birthday", id="birthday") }}
+                        {{ form.birthday(type="date", id="birthday") }}
                     </div>
+<<<<<<< HEAD
     
                     <div class="input-div input-width-third">
+=======
+
+                    <div class="input-div">
+>>>>>>> 66c147095b4fd25263ea3ab5327b524b09d6e268
                         <label for="gender">Gender</label>
-                        {{ form.gender(type="gender", id="gender") }}
+                        {{ form.gender(type="text", id="gender") }}
                     </div>
+<<<<<<< HEAD
     
                     <div class="input-div input-width-third">
+=======
+
+                    <div class="input-div">
+>>>>>>> 66c147095b4fd25263ea3ab5327b524b09d6e268
                         <label for="ethnicity">Ethnicity</label>
-                        {{ form.ethnicity(type="ethnicity", id="ethnicity") }}
+                        {{ form.ethnicity(type="text", id="ethnicity") }}
                     </div>
                 </div>
             </div>
@@ -65,9 +80,9 @@
 
                     <div class="input-div input-width-third">
                         <label for="phoneNumber">Phone Number</label>
-                        {{ form.phoneNumber(type="phoneNumber", id="phoneNumber") }}
+                        {{ form.phone_number(type="text", id="phoneNumber") }}
                     </div>
-                </div>                
+                </div>
             </div>
 
             <div class="application-div">
@@ -76,17 +91,17 @@
                 <div class="application-div-inputs">
                     <div class="input-div input-width-60">
                         <label for="school">School</label>
-                        {{ form.school(type="school", id="school") }}
+                        {{ form.school(type="text", id="school") }}
                     </div>
 
                     <div class="input-div input-width-third">
                         <label for="program">Program of Study</label>
-                        {{ form.program(type="program", id="program") }}
+                        {{ form.program(type="text", id="program") }}
                     </div>
 
                     <div class="input-div input-width-third">
                         <label for="graduation">Expected Graduation Year</label>
-                        {{ form.graduation(type="graduation", id="graduation") }}
+                        {{ form.grad_year(type="text", id="graduation") }}
                     </div>
                 </div>
             </div>
@@ -108,17 +123,17 @@
                 <div class="application-div-inputs">
                     <div class="input-div input-width-full">
                         <label for="q1">Have you ever been to a hackathon/makeathon before? Tell us briefly about it.</label>
-                        {{ form.q1(type="q1", id="q1") }}
+                        {{ form.q1_prev_hackathon(type="text", id="q1") }}
                     </div>
 
                     <div class="input-div input-width-full">
                         <label for="q2">Why do you want to participate at MakeUofT?</label>
-                        {{ form.q2(type="q2", id="q2") }}
+                        {{ form.q2_why_participate(type="text", id="q2") }}
                     </div>
 
                     <div class="input-div input-width-full">
                         <label for="q3">Tell us about your experience with hardware! </label>
-                        {{ form.q3(type="q3", id="q3") }}
+                        {{ form.q3_hardware_exp(type="text", id="q3") }}
                     </div>
                 </div>
             </div>
@@ -129,7 +144,7 @@
                 <div class="application-div-inputs">
                     <div class="input-div">
                         <label for="howDidYouHear">How did you hear about MakeUofT?</label>
-                        {{ form.howDidYouHear(type="howDidYouHear", id="howDidYouHear") }}
+                        {{ form.how_you_hear(type="text", id="howDidYouHear") }}
                     </div>
 
                     <div class="form-checkbox-div">
@@ -139,8 +154,8 @@
 
                     <div class="form-checkbox-div">
                         <label for="shareApplication">I authorize IEEE to share my application/registration information for event administration, ranking, MLH administration, pre- and post- event information emails, and occasional messages about hackathons in-line with the <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf">MLH Privacy Policy</a>. I further agree to the terms of both the <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf">MLH Contest Terms and Conditions</a> and the <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf">MLH Privary Policy</a>.</label>
-                        <input type="checkbox" id="shareApplication"> 
-                    
+                        <input type="checkbox" id="shareApplication">
+
                     <div class="form-checkbox-div">
                         <label for="shareResume">I consent to IEEE UofT sharing my resume with event sponsors</label>
                         <input type="checkbox" id="shareResume">
@@ -157,6 +172,11 @@
                 <button class="submit black-outline-btn">Save</button>
                 <button class="submit pink-btn">Submit Application</button>
             </div>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 66c147095b4fd25263ea3ab5327b524b09d6e268
         </form>
     </div>
 
