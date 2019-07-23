@@ -27,15 +27,15 @@
                 <div class="input-div name-input">
                     <div class="input-div">
                         <label for="firstName">First Name</label>
-                        {{ form.firstName(type="firstName", id="firstName") }}
+                        {{ form.first_name(type="text", id="firstName") }}
                     </div>
 
                     <div class="input-div">
                         <label for="lastName">Last Name</label>
-                        {{ form.lastName(type="lastName", id="lastName") }}
+                        {{ form.last_name(type="text", id="lastName") }}
                     </div>
                 </div>
-                
+
                 <div class="input-div">
                     <label for="email">Email</label>
                     {{ form.email(type="email", id="email") }}
@@ -46,7 +46,7 @@
                 </div>
                 <div class="input-div">
                     <label for="reenterPassword">Re-Enter Password</label>
-                    {{ form.reenterPassword(type="reenterPassword", id="reenterPassword") }}
+                    {{ form.password2(type="password", id="reenterPassword") }}
                 </div>
                 <button type="submit" form="register-form" class="submit-btn btn-yellow">Sign Up</button>
             </form>
