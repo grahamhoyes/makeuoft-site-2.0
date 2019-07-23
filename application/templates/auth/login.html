@@ -13,6 +13,10 @@
     <title>User Login</title>
 </head>
 <body>
+    <header class="form-header">
+        <a href="/makeuoft/"><img class="form-header-logo" src="{{ url_for('static', filename='img/CubeyBoi.svg') }}"/></a>
+    </header>
+
     <div class="login-form-div">
         <div class="form-container">
             <form class="login-form" id="login-form" method="POST" novalidate>
@@ -21,13 +25,11 @@
                     <div class="input-div">
                         <label for="email">Email</label>
                         {{ form.email(type="email", id="email") }}
-                        <!--input type="text" name="email" id="email"-->
                     </div>
 
                     <div class="input-div">
-                        <label for="email">Password</label>
+                        <label for="password">Password</label>
                         {{ form.password(type="password", id="password") }}
-                        <!--input type="text" name="password" id="password"-->
                     </div>
                     <button type="submit" form="login-form" class="submit-btn">Sign In</button>
             </form>

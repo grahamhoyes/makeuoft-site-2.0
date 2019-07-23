@@ -718,12 +718,6 @@ button.radius, .button.radius {
 
 
 /* START OF LOGIN PAGE FORM */
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
 
 .login-form-div {
     display: flex;
@@ -734,9 +728,12 @@ button.radius, .button.radius {
 
 .login-form {
     width: 40vw;
+    min-width: 340px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    padding: 20px;
 }
 
 .login-form h1 {
@@ -751,15 +748,15 @@ button.radius, .button.radius {
 }
 
 .input-div {
-    max-width: 270px;
-    width: 90%;
+    max-width: 300px;
+    width: 100%;
     margin-bottom: 15px;
     display: flex;
     flex-direction: column;
 }
 .login-form label {
     font-family: Source Sans Pro;
-    font-size: 11.2px;
+    font-size: 14px;
     /* line-height: 14px; */
     color: #000000;
     margin-bottom: 4px;
@@ -771,12 +768,13 @@ button.radius, .button.radius {
     border-radius: 0.8px;
     width: 100%;
     padding: 10px 10px;
-    font-size: 12px;
+    font-size: 14px;
     outline: none;
 }
 
-.MiddleCircles {
-    width: 40vw;
+.login-form-div .MiddleCircles {
+    width: 60vw;
+    max-width: 550px;
 }
 
 .submit-btn {
@@ -793,6 +791,11 @@ button.radius, .button.radius {
     border-radius: 20.7px;
     border: none;
     margin-top: 25px;
+    transition: all 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #256B8E;
 }
 .form-container {
     display: flex;
@@ -800,4 +803,73 @@ button.radius, .button.radius {
     align-items: center;
 }
 
+.form-header {
+  width: 100vw;
+  height: 60px;
+  padding: 10px 20px;
+}
+
+.form-header-logo {
+  height: 100%;
+}
+
+
+@media screen and (min-width: 1201px) {
+  .login-form { left: 12vw; }
+  .login-form-div .MiddleCircles { width: 60vw; }
+} 
+
+@media screen and (max-width: 1200px) {
+  .login-form { left: 8vw; }
+}
+
+@media screen and (max-width: 1050px) {
+  .login-form { left: 1vw; }
+  .login-form-div .MiddleCircles { width: 50vw; }
+} 
+
+@media screen and (max-width: 700px) {
+  .login-form { 
+    width: 45vw;
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .login-form-div { flex-direction: column; }
+  .login-form { width: 100vw; padding: 0px;}
+  .login-form-div .MiddleCircles { width: 80vw; }
+}
+
+@media screen and (max-width: 400px) {
+  .input-div { width: 90%; }
+}
 /* END OF LOGIN PAGE FORM */
+
+
+.btn-yellow {
+  background-color: #FFAE49;
+}
+
+.btn-yellow:hover {
+  background-color: #C3791D;
+}
+
+/* START OF REGISTER PAGE FORM */
+
+.signup-msg {
+  margin: 4px 0 12px;
+  text-align: center;
+  /* width: 90%; */
+}
+
+.name-input {
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.name-input .input-div {
+    width: 48%;
+}
+
+/* END OF REGISTER PAGE FORM */
