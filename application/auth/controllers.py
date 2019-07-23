@@ -1,6 +1,6 @@
 from flask import request, render_template, flash, session, redirect, url_for, jsonify, make_response
 from application.db_models import *
-from application.auth.forms import RegistrationForm, LoginForm # import the SearchForm, SelectTableForm, ChooseColumnsForm classes from forms.py
+from application.auth.forms import RegistrationForm, LoginForm, ApplicationForm
 
 # Import the admin Blueprint from admin/__init__.py
 from application.auth import auth
@@ -53,3 +53,10 @@ def register():
         flash('Congratulations, you have successfully registered!')
         return redirect(url_for('auth.login'))
     return render_template('auth/register.html', form=form)
+
+
+@auth.route('/apply', methods=['GET','POST'])
+#@login_required
+def apply():
+    form = ApplicationForm()
+    return render_template('auth/application.html', form=form)
