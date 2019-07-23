@@ -299,15 +299,16 @@ a.anchor {
 
 .pink-btn {
   background-color:#FBBEAF;
-  font-weight: 600;
+  /* font-weight: 600; */
   color:#000000;
   border-radius: 30px;
   font-size: 18px;
   padding: 8px 18px;
-  transition: color .3s;
+  transition: all .3s;
   max-width: 200px;
   text-align: center;
   align-self: center;
+  border: none;
 }
 
 .pink-btn:hover {
@@ -316,16 +317,23 @@ a.anchor {
 }
 
 .black-outline-btn {
-  background-color: none;
+  background-color: white;
   font-weight: 600;
   color:#000000;
   border-radius: 30px;
   font-size: 18px;
   padding: 8px 18px;
-  transition: color .3s;
+  transition: all .3s;
   max-width: 150px;
   text-align: center;
   align-self: center;
+  border: 0.8px solid #000000;
+  transition: color .3s;
+}
+
+.black-outline-btn:hover {
+  background-color: black;
+  color: white;
 }
 
 /* End of WANT TO SPONSOR US? */
@@ -750,7 +758,6 @@ button.radius, .button.radius {
 }
 
 .login-form h1 {
-
     font-weight: bold;
     font-size: 32px;
     line-height: 40px;
@@ -768,14 +775,13 @@ button.radius, .button.radius {
     flex-direction: column;
 }
 .login-form label {
-
     font-size: 14px;
     /* line-height: 14px; */
     color: #000000;
     margin-bottom: 4px;
 }
 
-.login-form input {
+.login-form input, select {
     border: 0.8px solid #979797;
     box-sizing: border-box;
     border-radius: 0.8px;
@@ -894,12 +900,36 @@ button.radius, .button.radius {
 
 /* START OF APPLICATION PAGE FORM */
 .application-body {
-  background: linear-gradient(130.14deg, #48A0AF 9.68%, #3386BA 87.5%);
+  background-color: linear-gradient(130.14deg, #48A0AF 9.68%, #3386BA 87.5%);
+  /* background-color:pink; */
+}
+
+.application-form-div {
+  background-color: white;
+  padding: 50px 20px;
+  width: 80vw;
+  margin: auto;
+}
+.application-form-div h1 {
+  font-size: 32px;
+  line-height: 40px;
+  text-align: center;
+  letter-spacing: 5.4px;
+  color: #4A4A4A;
+  margin-bottom: 50px;
+}
+
+.application-form {
+  left: 0;
+  margin: 0;
+  width: 100%;
+  padding: 0;
 }
 
 .application-div {
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
 
 .application-div h2 {
@@ -909,43 +939,76 @@ button.radius, .button.radius {
   text-align: right;
   letter-spacing: 2.44286px;
   color: #000000;
-  width: 101px;
+  width: 11rem;
+  margin-top: 25px;
 }
 
 .application-div-inputs {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  margin-left: 30px;
+  margin-bottom: 40px;
 }
 
 .input-width-third {
   width: 33%;
   margin-right: 20px;
+  min-width: 170px;
 }
 .input-width-half {
   width: 50%;
   margin-right: 20px;
+  min-width: 260px;
 }
 
 .input-width-full {
   width: 100%;
+  max-width: 500px;
 }
 
 .input-width-60 {
   width: 60%;
   margin-right: 20px;
+  min-width: 320px;
 }
 
 .form-checkbox-div {
   display: flex;
   flex-direction: row-reverse;
+  width: 100%;
+  justify-content: flex-end;
+  margin-bottom: 15px;
 }
 
 .form-checkbox-div label {
   font-size: 14px;
   line-height: 18px;
   color: #666666;
+  margin-left: 12px;
+  margin-bottom: 0;
 }
+
+.form-checkbox-div input {
+  width: auto;
+}
+
+.form-btn-div {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-left: calc(11rem - 23px);
+}
+
+.form-btn-div button {
+  font-size: 14.4px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #060606;
+}
+
 
 .form-checkbox-div a, .form-checkbox-div a:active {
   color: #3A8EB7;

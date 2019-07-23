@@ -20,7 +20,7 @@
     <div class="application-form-div">
         <h1>Application</h1>
         <!-- <div class="form-container"> -->
-        <form class="login-form" id="login-form" method="POST" novalidate>
+        <form class="login-form application-form" id="application-form" method="POST" novalidate>
             {{ form.hidden_tag() }}
 
             <div class="application-div">
@@ -139,7 +139,7 @@
                     <div class="form-checkbox-div">
                         <label for="shareApplication">I authorize IEEE to share my application/registration information for event administration, ranking, MLH administration, pre- and post- event information emails, and occasional messages about hackathons in-line with the <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf">MLH Privacy Policy</a>. I further agree to the terms of both the <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf">MLH Contest Terms and Conditions</a> and the <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf">MLH Privary Policy</a>.</label>
                         <input type="checkbox" id="shareApplication">
-
+                    </div>
                     <div class="form-checkbox-div">
                         <label for="shareResume">I consent to IEEE UofT sharing my resume with event sponsors</label>
                         <input type="checkbox" id="shareResume">
