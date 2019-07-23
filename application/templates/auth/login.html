@@ -31,6 +31,9 @@
                         <label for="password">Password</label>
                         {{ form.password(type="password", id="password") }}
                     </div>
+                    <div class="input-div">
+                         {{ form.remember_me() }} Remember Me!
+                    </div>
                     <button type="submit" form="login-form" class="submit-btn">Sign In</button>
             </form>
         </div>
