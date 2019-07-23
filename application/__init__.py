@@ -4,7 +4,7 @@ from flask import Flask, render_template
 # Import SQLAlchemy and Migrate
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
-from config import DevelopmentConfig, ProductionConfig
+from config import DevelopmentConfig, ProductionConfig, ReverseProxied
 
 # Import the flask-login authentication module
 from flask_login import LoginManager, login_required
@@ -41,8 +41,8 @@ def create_app():
         flask_app = Flask(__name__, static_url_path = '/makeuoft/static')
         #flask_app = Flask(__name__)
         config_class=ProductionConfig()
-        from flask_reverse_proxy_fix.middleware import ReverseProxyPrefixFix
-        ReverseProxyPrefixFix(flask_app)
+        flask_app.wsgi_app = ReverseProxied(flask_app.wsgi_app, script_name='/makeuoft')
+
 
 
     else:
