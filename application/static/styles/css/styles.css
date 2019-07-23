@@ -900,7 +900,7 @@ button.radius, .button.radius {
 
 /* START OF APPLICATION PAGE FORM */
 .application-body {
-  background-color: linear-gradient(130.14deg, #48A0AF 9.68%, #3386BA 87.5%);
+  background: linear-gradient(130.14deg, #48A0AF 9.68%, #3386BA 87.5%);
   /* background-color:pink; */
 }
 
@@ -909,6 +909,7 @@ button.radius, .button.radius {
   padding: 50px 20px;
   width: 80vw;
   margin: auto;
+  margin-bottom: 80px;
 }
 .application-form-div h1 {
   font-size: 32px;
@@ -924,6 +925,8 @@ button.radius, .button.radius {
   margin: 0;
   width: 100%;
   padding: 0;
+  max-width: 800px;
+  margin: auto;
 }
 
 .application-div {
