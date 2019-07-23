@@ -34,8 +34,6 @@ class ProductionConfig(object):
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     DATABASE_CONNECT_OPTIONS = {}
 
-    REVERSE_PROXY_PATH_PREFIX='/makeuoft'
-
     # Application threads. A common general assumption is
     # using 2 per available processor cores - to handle
     # incoming requests using one and performing background
@@ -65,7 +63,7 @@ class ProductionConfig(object):
     # Publishable key for Stripe Payment API (note that if the env. variable is not found, it will use the other default value)
     #STRIPE_PUBLISHABLE_KEY =  os.environ.get('STRIPE_PUBLISHABLE_KEY') or
 
-# ReverseProxied Configurations
+# ReverseProxied Configurations for app mounting to subdomain (i.e., /makeuoft)
 class ReverseProxied(object):
 
     def __init__(self, app, script_name=None, scheme=None, server=None):

@@ -41,9 +41,15 @@ def create_app():
         #flask_app = Flask(__name__, static_url_path = '/makeuoft/static')
         flask_app = Flask(__name__)
         config_class=ProductionConfig()
+        # Line for mounting the app to the /makeuoft domain
+        """
+        Note: ensure that ProxyPass and ReverseProxyPass are as follows on apache config:
+        ProxyPass /makeuoft/static !
+        ProxyPass /makeuoft http://127.0.0.1:8181/
+        ProxyPassReverse /makeuoft http://ieee.utoronto.ca/makeuoft
+        Alias /makeuoft/static /var/www/makeuoft/public_html/static
+        """
         flask_app.wsgi_app = ReverseProxied(flask_app.wsgi_app, script_name='/makeuoft')
-
-
 
     else:
         flask_app = Flask(__name__)
