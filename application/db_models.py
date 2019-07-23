@@ -7,6 +7,8 @@ from sqlalchemy.sql import func
 from flask_login import UserMixin
 from application import login_manager
 
+# Import class to create and check password hashes
+from werkzeug.security import generate_password_hash, check_password_hash
 
 class MailingList(db.Model):
     __tablename__ = 'MailingList'
