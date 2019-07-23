@@ -14,10 +14,6 @@ from flask_login import LoginManager, login_required
 import pymysql
 pymysql.install_as_MySQLdb()
 
-# Import the reverse proxy fix library
-from flask_reverse_proxy_fix.middleware import ReverseProxyPrefixFix
-
-
 import os
 
 # Initialize the database instance for storing all the information
