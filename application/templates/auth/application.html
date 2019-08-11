@@ -37,14 +37,15 @@
                         {{ form.last_name(type="text", id="lastName") }}
                     </div>
 
-                    <div class="input-div">
+                    <div class="input-div input-width-third">
                         <label for="birthday">Birthday</label>
                         {{ form.birthday(type="date", id="birthday") }}
                     </div>
 
                     <div class="input-div input-width-third">
                         <label for="gender">Gender</label>
-                        {{ form.gender(type="text", id="gender") }}
+                        {{ form.gender(type="text", id="gender", class="select") }}
+                        <div class="arrow-down"></div>
                     </div>
                     <div class="input-div input-width-third">
                         <label for="ethnicity">Ethnicity</label>

@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+textarea {
+  height: 120px;
+  outline: none;
+}
+
 body {
   font-family: "Source Sans Pro", sans-serif; }
 
@@ -18,6 +23,7 @@ h4 {
   font-size: 20px; }
 p {
   font-size: 19px; }
+
 
 
 .section-headings {
@@ -774,6 +780,7 @@ button.radius, .button.radius {
     margin-bottom: 15px;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .input-div textarea {
@@ -928,6 +935,7 @@ button.radius, .button.radius {
   max-width: 1000px;
   margin: auto;
   margin-bottom: 80px;
+  position: relative;
 }
 .application-form-div h1 {
   font-size: 32px;
@@ -951,6 +959,7 @@ button.radius, .button.radius {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  position: relative;
 }
 
 .application-div h2 {
@@ -970,6 +979,7 @@ button.radius, .button.radius {
   flex-wrap: wrap;
   margin-left: 30px;
   margin-bottom: 40px;
+  position: relative;
 }
 
 .input-width-third {
@@ -1012,6 +1022,7 @@ button.radius, .button.radius {
 
 .form-checkbox-div input {
   width: auto;
+  margin-top: 3px;
 }
 
 .form-btn-div {
@@ -1039,6 +1050,83 @@ button.radius, .button.radius {
   text-decoration: underline;
 }
 
+.select {
+  -webkit-appearance: none;
+  background-color: #fff;
+  border: 0.8px solid #979797;
+  box-sizing: border-box;
+  border-radius: 0.8px;
+  width: 100%;
+  padding: 12px 10px;
+  font-size: 14px;
+  outline: none;
+}
+
+.arrow-down {
+  width: 0; 
+  height: 0; 
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 9px solid #4A9FC0;
+  position: absolute;
+  right: 10px;
+  bottom: 15.5px;
+}
+
+input[type=date]::-webkit-inner-spin-button {
+  color: #4A9FC0;
+}
+
+input[type=date]::-webkit-calendar-picker-indicator {
+  color: #4A9FC0;
+}
+
+@media screen and (max-width: 720px) {
+  .application-div {
+    flex-direction: column;
+    margin: 0 auto 25px;
+  }
+
+  .application-div-inputs {
+    margin: 0;
+    /* justify-content: center; */
+  }
+
+  .input-width-third {
+    width: 45%;
+  }
+
+  .application-div h2 {
+    text-align: left;
+    width: 100%;
+    margin-bottom: 15px;
+
+  }
+  .login-form {
+    min-width: 0;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .application-div-inputs {
+    flex-direction: column;
+  }
+
+  .application-form-div {
+    width: 90vw;
+  }
+  .login-form input, select, .select, .application-div h2, .input-div, .input-width-full, .form-checkbox-div, .form-btn-div {
+    width: 100%
+  }
+  .input-width-third, .input-width-60, .input-width-half {
+    width: 100%;
+    margin-right: 0;
+    min-width: 0;
+  }
+  .form-checkbox-div input {
+    width: auto;
+  }
+}
 
 /* 
 .checkbox-style {
