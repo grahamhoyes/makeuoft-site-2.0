@@ -55,6 +55,27 @@ def register():
     return render_template('auth/register.html', form=form)
 
 
+@auth.route('/passwordupdated', methods=['GET','POST'])
+def passwordUpdated():
+    return render_template('auth/forgotPasswordChangeComplete.html')
+
+@auth.route('/forgotpassword', methods=['GET','POST'])
+def passwordUpdated():
+    return render_template('auth/forgotPasswordEnterEmail.html')
+
+@auth.route('/newpassword', methods=['GET','POST'])
+def passwordUpdated():
+    return render_template('auth/forgotPasswordEnterNewPassword.html')
+
+@auth.route('/confirmemail', methods=['GET','POST'])
+def passwordUpdated():
+    return render_template('auth/signupEmailToConfirm.html')
+
+@auth.route('/emailconfirmed', methods=['GET','POST'])
+def passwordUpdated():
+    return render_template('auth/signupEmailConfirmed.html')
+
+
 @auth.route('/apply', methods=['GET','POST'])
 #@login_required
 def apply():
