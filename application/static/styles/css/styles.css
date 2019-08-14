@@ -49,6 +49,11 @@ a.anchor {
   max-width: 1300px;
 }
 
+.text-area {
+  padding: 10px 10px;
+}
+
+
 /* Start of BLUE LANDING SECTION */
 
 #section-landing {
@@ -762,6 +767,7 @@ button.radius, .button.radius {
     align-items: center;
     position: relative;
     padding: 20px;
+    margin-bottom: 30px;
 }
 
 .login-form h1 {
@@ -919,6 +925,22 @@ button.radius, .button.radius {
     width: 48%;
 }
 
+.form-links {
+  margin-top: 30px;
+}
+
+.forgot-pw {
+  margin-top: 30px;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+}
+
+.forgot-pw:hover {
+  color: #388DB7;
+} 
+
 /* END OF REGISTER PAGE FORM */
 
 
@@ -1020,9 +1042,9 @@ button.radius, .button.radius {
   margin-bottom: 0;
 }
 
-.form-checkbox-div input {
+.form-checkbox-div input, .remember-me  input {
   width: auto;
-  margin-top: 3px;
+  margin-top: 4px;
 }
 
 .form-btn-div {

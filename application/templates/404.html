@@ -1,9 +1,106 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700,900|Source+Sans+Pro:400,400i,600,700,900&display=swap" rel="stylesheet">
   <title>404 Page Not Found</title>
 </head>
-<body>
-  ERROR: 404 Page Not Found
+<body >
+  <div class="error">
+      <a href="/makeuoft"><img class="logo" src="{{ url_for('static', filename='img/CubeyBoi.svg') }}"/></a>
+    <h1>ERROR 404:</h1>
+    <p>Page Not Found</p>
+
+    <div class="btn">
+        <a href="/makeuoft">Back to home</a>
+        <a href="/auth/login">Back to log in</a>
+    </div>
+    
+  </div> 
 </body>
 </html>
+
+
+<style>
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(153.66deg, #48A0AF 16.6%, #3386BA 88.85%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Source Sans Pro";
+  height: 100vh;
+}
+
+.error {
+  width: 80%;
+  max-width: 600px;
+  border-radius: 10px;
+  background-color: #fff;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+}
+
+.error h1 {
+  font-size: 5vw;
+  font-weight: 500;
+  margin-top: 30px;
+}
+
+.error p {
+  font-size: 18px;
+  margin: 30px 0 50px;
+}
+
+.error .btn a {
+  padding: 10px 20px;
+  color: white;
+  font-size: 16px;
+  transition: all .2s;
+  border-radius: 100px;
+  margin: 20px 20px 0;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+ 
+.error .btn a:nth-child(1) {
+  background-color: #388DB7;
+}
+
+.error .btn a:nth-child(1):hover {
+  background-color: #256B8E;
+}
+
+.error .btn a:nth-child(2) {
+  background-color: #ffa21b;;
+}
+
+.error .btn a:nth-child(2):hover {
+  background-color: #C3791D;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+}
+
+</style>
