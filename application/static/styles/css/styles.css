@@ -24,7 +24,9 @@ h4 {
 p {
   font-size: 19px; }
 
-
+button, a, input[type=checkbox] {
+  cursor: pointer;
+}
 
 .section-headings {
   font-weight: bold;
@@ -1101,6 +1103,10 @@ input[type=date]::-webkit-inner-spin-button {
 
 input[type=date]::-webkit-calendar-picker-indicator {
   color: #4A9FC0;
+}
+
+.login-form input::placeholder {
+  font-size: 14px;
 }
 
 @media screen and (max-width: 720px) {
