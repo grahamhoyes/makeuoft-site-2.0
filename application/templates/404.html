@@ -15,10 +15,10 @@
     <p>Page Not Found</p>
 
     <div class="btn">
-        <a href="/makeuoft">Back to home</a>
-        <a href="/auth/login">Back to log in</a>
+        <a href="{{ url_for('home.index')}}">Back to home</a>
+        <a href="{{ url_for('auth.login')}}">Back to log in</a>
     </div>
-  </div> 
+  </div>
 </body>
 </html>
 
@@ -80,7 +80,7 @@ body {
   justify-content: center;
 }
 
- 
+
 .error .btn a:nth-child(1) {
   background-color: #388DB7;
 }

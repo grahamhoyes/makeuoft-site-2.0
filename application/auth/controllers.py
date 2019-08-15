@@ -1,6 +1,6 @@
 from flask import request, render_template, flash, session, redirect, url_for, jsonify, make_response
 from application.db_models import *
-from application.auth.forms import RegistrationForm, LoginForm, ApplicationForm
+from application.auth.forms import RegistrationForm, LoginForm, ApplicationForm, ForgotPasswordEmailForm
 
 # Import the admin Blueprint from admin/__init__.py
 from application.auth import auth
@@ -61,7 +61,8 @@ def passwordChangeComplete():
 
 @auth.route('/forgotpassword', methods=['GET','POST'])
 def forgotPassword():
-    return render_template('auth/forgotPasswordEnterEmail.html')
+    form = ForgotPasswordEmailForm()
+    return render_template('auth/forgotPasswordEnterEmail.html', form=form)
 
 @auth.route('/newpassword', methods=['GET','POST'])
 def newPassword():

@@ -59,3 +59,9 @@ class ApplicationForm(FlaskForm):
         search_email = Users.query.filter_by(email=email.data).first()
         if(search_email is not None):
             raise ValidationError('Please use a different email address.')
+
+class ForgotPasswordEmailForm(FlaskForm):
+    """
+    Form takes email of contestant when they forgot their password
+    """
+    email = StringField("Email", validators=[DataRequired(), Email()])
