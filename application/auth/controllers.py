@@ -12,6 +12,7 @@ from flask_login import current_user, login_user, logout_user, login_required
 from werkzeug.urls import url_parse
 
 @auth.route('/login', methods=['GET', 'POST'])
+# ADD FLASH MESSAGES WHEN THEY GET INCORRECT LOGIN
 def login():
     if(current_user.is_authenticated):
         return redirect(url_for('home.index'))

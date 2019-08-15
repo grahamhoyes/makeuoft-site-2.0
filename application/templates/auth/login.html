@@ -37,9 +37,9 @@
                     <button type="submit" form="login-form" class="submit-btn">Sign In</button>
 
                     <span class="form-links">
-                        <a href="/auth/forgotPasswordEnterEmail" class="forgot-pw">Forgot password</a>
-                        &nbsp;&nbsp;|&nbsp;&nbsp;  
-                        <a href="/auth/register" class="forgot-pw">Sign up</a>
+                        <a href="{{ url_for('auth.forgotPassword')}}" class="forgot-pw">Forgot password</a>
+                        &nbsp;&nbsp;|&nbsp;&nbsp;
+                        <a href="{{ url_for('auth.register')}}" class="forgot-pw">Sign up</a>
                     </span>
             </form>
         </div>
