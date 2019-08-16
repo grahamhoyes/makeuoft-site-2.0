@@ -9,6 +9,8 @@ from config import DevelopmentConfig, ProductionConfig, ReverseProxied
 # Import the flask-login authentication module
 from flask_login import LoginManager, login_required
 
+# Import the flask_mail app
+from flask_mail import Mail
 
 # Initialize pymysql for mysql support in deployment
 import pymysql
@@ -24,6 +26,12 @@ migrate = Migrate()
 
 # Initialize the login instance
 login_manager = LoginManager()
+
+# Initialize the mail instance
+#NOTE IF MAIL GIVES A RECURSION ERROR YOU MAY HAVE INSTALLED THE NEW FLASK MAIL VERSION WHICH IS CURRENTLY BUGGED
+#TRY ROLLING BACK TO flask_mail version 0.9.0 instructions can be found in README
+mail = Mail()
+
 """
  Encapsulate the app in a function in order to be able to initialize it with
  various environment variables for  testing as well as versatility
@@ -59,6 +67,7 @@ def create_app():
     # Initialize the various models with the flask_app
     db.init_app(flask_app)
     migrate.init_app(flask_app, db)
+    mail.init_app(flask_app)
 
     # Create a LoginManager instance
     login_manager.init_app(flask_app)

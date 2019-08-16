@@ -15,6 +15,13 @@ class DevelopmentConfig(object):
     THREADS_PER_PAGE = 2
     CSRF_ENABLED = True
     SECRET_KEY = "secret"
+    MAIL_SERVER = "smtp.gmail.com" #assuming gmail is being used
+    MAIL_USERNAME = "makeuoft@gmail.com"#change this
+    MAIL_PASSWORD = ""
+    MAIL_PORT = 465
+    MAIL_USE_SSL = True
+    MAIL_DEFAULT_SENDER = 'makeuoft@gmail.com'
+    MAIL_USE_TLS = False
 
 
 # ProductionConfig class to encapsulate the config varaibles
