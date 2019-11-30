@@ -10,29 +10,34 @@ textarea {
 }
 
 body {
-  font-family: "Source Sans Pro", sans-serif; }
+  font-family: "Nunito", sans-serif; }
 
 h1 {
-    font-family: "Roboto";
+    font-family: "Montserrat" !important;
     text-align: center;
     font-weight: bold;
 }
 h3 {
-  font-size: 30px; }
+  font-size: 30px;
+  font-family: "Montserrat" !important; }
 h4 {
-  font-size: 20px; }
+  font-size: 20px;
+  font-family: "Montserrat" !important; }
 p {
   font-size: 19px; }
 
 button, a, input[type=checkbox] {
   cursor: pointer;
+  font-family: "Montserrat" !important;
+  font-weight: bold !important;
 }
 
 .section-headings {
+  font-family: "Montserrat";
   font-weight: bold;
   font-size: 42px;
   text-align: center;
-  letter-spacing: 4px;
+  /* letter-spacing: 4px; */
   color: #4A4A4A;
   margin-bottom: 1rem;
 }
@@ -86,7 +91,7 @@ a.anchor {
   color: white;
   width: 50%;}
 
-.landing-img { width: 45%; }
+.landing-img { width: 40%; }
 
 .landing-img img {
   width: 90% !important;
@@ -96,13 +101,13 @@ a.anchor {
 .makeuoft-title {
   font-weight: bold;
   font-size: 62px;
-  letter-spacing: 2px;
+  /* letter-spacing: 2px; */
   color: #FFFFFF;
 }
 .makeuoft-subtitle {
   font-weight: 500;
   font-size: 28px;
-  letter-spacing: 4px;
+  /* letter-spacing: 4px; */
 }
 
 .makeuoft-defn {
@@ -116,7 +121,7 @@ a.anchor {
 }
 .defn-text {
   font-size: 21px;
-  letter-spacing: 2px;
+  /* letter-spacing: 2px; */
   text-align: left !important;
   line-height: 30px;
   display: inline;
@@ -125,7 +130,7 @@ a.anchor {
 .date-text {
   font-weight: 600;
   font-size: 24px;
-  letter-spacing: 2px;
+  /* letter-spacing: 2px; */
 }
 .stay-updated-title {
   font-weight: bold;
@@ -176,8 +181,6 @@ a.anchor {
 }
 /* End of BLUE LANDING SECTION */
 
-
-
 /* Start of ABOUT US */
 
 #section-about {
@@ -195,6 +198,29 @@ a.anchor {
 }
 
 /* End of ABOUT US */
+
+/* Start of COUNTDOWN */
+#section-countdown {
+  padding: 3em 0 4em 0; }
+  #section-countdown #countdown-banner {
+    background: linear-gradient(351.94deg, #3F95B4 -11.6%, #479FB0 17.52%, #48A0AF 65.87%, #3386BA 95.18%); }
+    #section-countdown #countdown-banner .countdown-digit {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #FFF;
+      text-align: center;
+      margin-top: 0.2em; }
+  #section-countdown .countdown-padding {
+    padding: 0 calc((100% - 40em) / 2); }
+  .countdown-padding h2 {
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: space-around;
+    padding-top: .5rem;
+  }
+
+/* End of COUNTDOWN */
+
 
 
 /* Start of MOMENTS FROM LAST YEAR */
@@ -572,7 +598,7 @@ font-weight: bold;
   width: 100%;
   padding: 0;
   color: #fff;
-  font-family: "Roboto";
+  font-family: "Montserrat";
   -webkit-transition: all ease-out .15s;
   -moz-transition: all ease-out .15s;
   -o-transition: all ease-out .15s;
@@ -618,7 +644,7 @@ font-weight: bold;
 .top-bar .top-bar-right a {
   padding: 0.75em 0.75em;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 600;
   margin-bottom: 3px;
   color: inherit; }
 
@@ -652,22 +678,6 @@ font-weight: bold;
 
 /* End of HEADER */
 
-
-
-/* OLD STUFF*/
-
-#section-countdown {
-  padding: 3em 0 4em 0; }
-  #section-countdown #countdown-banner {
-    background-color: #006497; }
-    #section-countdown #countdown-banner .countdown-digit {
-      font-size: 48px;
-      font-family: "Roboto";
-      color: #FFF;
-      text-align: center;
-      margin-top: 0.2em; }
-  #section-countdown .countdown-padding {
-    padding: 0 calc((100% - 40em) / 2); }
 
 
 
@@ -709,12 +719,12 @@ button.radius, .button.radius {
 
   .makeuoft-subtitle {
     font-size: 22px;
-    letter-spacing: 3px;
+    /* letter-spacing: 3px; */
   }
 
   .section-headings {
     font-size: 26px;
-    letter-spacing: 2px;
+    /* letter-spacing: 2px; */
   }
 
   .defn-term {
@@ -777,7 +787,7 @@ button.radius, .button.radius {
     font-size: 32px;
     line-height: 40px;
     text-align: center;
-    letter-spacing: 5.4px;
+    /* letter-spacing: 5.4px; */
     color: #4A4A4A;
     margin-bottom: 12px;
 }
@@ -835,12 +845,12 @@ button.radius, .button.radius {
 .submit-btn {
     width: 136px;
     height: 41px;
-    font-family: Roboto;
+    font-family: "Monserrat";
     font-weight: 500;
     font-size: 15.3px;
     line-height: 18px;
     text-align: center;
-    letter-spacing: 2.7px;
+    /* letter-spacing: 2.7px; */
     color: #FFFFFF;
     background-color: #388DB7;
     border-radius: 20.7px;
@@ -965,7 +975,7 @@ button.radius, .button.radius {
   font-size: 32px;
   line-height: 40px;
   text-align: center;
-  letter-spacing: 5.4px;
+  /* letter-spacing: 5.4px; */
   color: #4A4A4A;
   margin-bottom: 50px;
 }
@@ -991,7 +1001,7 @@ button.radius, .button.radius {
   font-size: 19px;
   line-height: 24px;
   text-align: right;
-  letter-spacing: 2.44286px;
+  /* letter-spacing: 2.44286px; */
   color: #000000;
   width: 11rem;
   margin-top: 25px;
