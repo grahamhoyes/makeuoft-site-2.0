@@ -17,6 +17,8 @@ h1 {
     text-align: center;
     font-weight: bold;
 }
+h2 {
+  font-family: "Montserrat" !important; }
 h3 {
   font-size: 30px;
   font-family: "Montserrat" !important; }
@@ -29,13 +31,15 @@ p {
 button, a, input[type=checkbox] {
   cursor: pointer;
   font-family: "Montserrat" !important;
-  font-weight: bold !important;
+  font-weight: 600 !important;
 }
 
 .section-headings {
   font-family: "Montserrat";
-  font-weight: bold;
-  font-size: 42px;
+  font-size: 36px;
+  font-weight: 600;
+  text-transform: uppercase;
+  /* font-size: 42px; */
   text-align: center;
   /* letter-spacing: 4px; */
   color: #4A4A4A;
@@ -205,6 +209,7 @@ a.anchor {
   #section-countdown #countdown-banner {
     background: linear-gradient(351.94deg, #3F95B4 -11.6%, #479FB0 17.52%, #48A0AF 65.87%, #3386BA 95.18%); }
     #section-countdown #countdown-banner .countdown-digit {
+      font-family: "Montserrat";
       font-size: 3rem;
       font-weight: bold;
       color: #FFF;
@@ -217,6 +222,7 @@ a.anchor {
     display: flex;
     justify-content: space-around;
     padding-top: .5rem;
+    font-family: "Nunito";
   }
 
 /* End of COUNTDOWN */
@@ -290,6 +296,7 @@ a.anchor {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  padding-top: 0;
 }
 
 .sponsor-us {
