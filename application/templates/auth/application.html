@@ -47,9 +47,39 @@
                         {{ form.gender(type="text", id="gender", class="select") }}
                         <div class="arrow-down"></div>
                     </div>
-                    <div class="input-div input-width-third">
+                    <div class="input-div input-width-full">
                         <label for="ethnicity">Ethnicity</label>
-                        {{ form.ethnicity(type="text", id="ethnicity") }}
+                        <div class="form-checkbox-div">
+                            <label for="confirm18">American Indian or Alaskan Native</label>
+                            <input type="checkbox" id="confirm18">
+                        </div>
+                        <div class="form-checkbox-div">
+                            <label for="confirm18">Asian / Pacific Islander</label>
+                            <input type="checkbox" id="confirm18">
+                        </div>
+                        <div class="form-checkbox-div">
+                            <label for="confirm18">Black or African American</label>
+                            <input type="checkbox" id="confirm18">
+                        </div>
+                        <div class="form-checkbox-div">
+                            <label for="confirm18">Hispanic</label>
+                            <input type="checkbox" id="confirm18">
+                        </div>
+                        <div class="form-checkbox-div">
+                            <label for="confirm18">White / Caucasian</label>
+                            <input type="checkbox" id="confirm18">
+                        </div>
+                        <div class="form-checkbox-div">
+                            <label for="confirm18">Other</label>
+                            <input type="checkbox" id="confirm18">
+                        </div>
+                        <div class="form-checkbox-div">
+                            <label for="confirm18">Prefer not to answer</label>
+                            <input type="checkbox" id="confirm18">
+                        </div>
+
+
+                        <!-- {{ form.ethnicity(type="text", id="ethnicity") }} -->
                     </div>
                 </div>
             </div>
@@ -80,14 +110,16 @@
                     </div>
 
                     <div class="input-div input-width-third">
+                        <label for="graduation">Expected Graduation Year</label>
+                        {{ form.grad_year(type="text", id="graduation") }}
+                    </div>
+
+                    <div class="input-div input-width-half">
                         <label for="program">Program of Study</label>
                         {{ form.program(type="text", id="program") }}
                     </div>
 
-                    <div class="input-div input-width-third">
-                        <label for="graduation">Expected Graduation Year</label>
-                        {{ form.grad_year(type="text", id="graduation") }}
-                    </div>
+                    
                 </div>
             </div>
 
