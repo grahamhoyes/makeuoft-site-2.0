@@ -656,6 +656,9 @@ font-weight: bold;
 .top-bar .top-bar-right {
   margin: auto; }
 
+.menu {
+  margin-right: 8rem;}
+
 .top-bar .top-bar-right li {
   margin: 0.5em; }
 
