@@ -28,28 +28,23 @@
 
                 <div class="application-div-inputs">
                     <div class="input-div input-width-third">
-                        <label for="firstName">First Name</label>
-                        {{ form.first_name(type="text", id="firstName") }}
-                    </div>
-
-                    <div class="input-div input-width-third">
-                        <label for="lastName">Last Name</label>
-                        {{ form.last_name(type="text", id="lastName") }}
+                        <label for="firstName">Preferred Name</label>
+                        {{ form.preferred_name(id="preferredName") }}
                     </div>
 
                     <div class="input-div input-width-third">
                         <label for="birthday">Birthday</label>
-                        {{ form.birthday(type="date", id="birthday") }}
+                        {{ form.birthday(id="birthday") }}
                     </div>
 
                     <div class="input-div input-width-third">
                         <label for="gender">Gender</label>
-                        {{ form.gender(type="text", id="gender", class="select") }}
+                        {{ form.gender(id="gender", class="select") }}
                         <div class="arrow-down"></div>
                     </div>
                     <div class="input-div input-width-third">
                         <label for="ethnicity">Ethnicity</label>
-                        {{ form.ethnicity(type="text", id="ethnicity") }}
+                        {{ form.ethnicity(id="ethnicity") }}
                     </div>
                 </div>
             </div>
@@ -58,11 +53,6 @@
                 <h2>Contact</h2>
 
                 <div class="application-div-inputs">
-                    <div class="input-div input-width-half">
-                        <label for="email">Email</label>
-                        {{ form.email(type="email", id="email") }}
-                    </div>
-
                     <div class="input-div input-width-third">
                         <label for="phoneNumber">Phone Number</label>
                         {{ form.phone_number(type="text", id="phoneNumber") }}
