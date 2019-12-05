@@ -4,25 +4,8 @@ from wtforms.validators import StopValidation
 
 class DataRequiredIfOtherFieldEmpty:
     """
-    Checks the field's data is 'truthy' otherwise stops the validation chain.
-
-    This validator checks that the ``data`` attribute on the field is a 'true'
-    value (effectively, it does ``if field.data``.) Furthermore, if the data
-    is a string type, a string containing only whitespace characters is
-    considered false.
-
-    If the data is empty, also removes prior errors (such as processing errors)
-    from the field.
-
-    **NOTE** this validator used to be called `Required` but the way it behaved
-    (requiring coerced data, not input data) meant it functioned in a way
-    which was not symmetric to the `Optional` validator and furthermore caused
-    confusion with certain fields which coerced data to 'falsey' values like
-    ``0``, ``Decimal(0)``, ``time(0)`` etc. Unless a very specific reason
-    exists, we recommend using the :class:`InputRequired` instead.
-
-    :param message:
-        Error message to raise in case of a validation error.
+    Checks that a given field is "truthy" only if another field specified by
+    `other_field` is not
     """
     field_flags = ('required', )
 
