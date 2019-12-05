@@ -18,7 +18,7 @@ $(document).ready(function() {
     }, 3141);
 
     // Countdown to registration opening
-    var makeathonDate = new Date("Feb 16, 2020 09:00:00").getTime();
+    var makeathonDate = new Date("Dec 20, 2019 09:00:00").getTime();
     setInterval(function() {
         var now = new Date().getTime();
         var remaining = makeathonDate - now;

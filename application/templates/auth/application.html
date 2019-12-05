@@ -42,7 +42,7 @@
                         {{ form.gender(id="gender", class="select") }}
                         <div class="arrow-down"></div>
                     </div>
-                    <div class="input-div input-width-third">
+                    <div class="input-div input-width-full">
                         <label for="ethnicity">Ethnicity</label>
                         {{ form.ethnicity(id="ethnicity") }}
                     </div>
@@ -70,14 +70,16 @@
                     </div>
 
                     <div class="input-div input-width-third">
+                        <label for="graduation">Expected Graduation Year</label>
+                        {{ form.grad_year(type="text", id="graduation") }}
+                    </div>
+
+                    <div class="input-div input-width-half">
                         <label for="program">Program of Study</label>
                         {{ form.program(type="text", id="program") }}
                     </div>
 
-                    <div class="input-div input-width-third">
-                        <label for="graduation">Expected Graduation Year</label>
-                        {{ form.grad_year(type="text", id="graduation") }}
-                    </div>
+
                 </div>
             </div>
 
