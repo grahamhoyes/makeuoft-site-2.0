@@ -1,16 +1,26 @@
 from flask_wtf import FlaskForm
 from wtforms import (
-    StringField,
-    PasswordField,
-    SubmitField,
     BooleanField,
     DateField,
+    FileField,
+    IntegerField,
+    PasswordField,
     SelectField,
+    StringField,
+    SubmitField,
     TextAreaField,
 )
 from wtforms.widgets import ListWidget, CheckboxInput
-from wtforms.validators import ValidationError, DataRequired, Email, EqualTo
+from wtforms.validators import (
+    DataRequired,
+    Email,
+    EqualTo,
+    NumberRange,
+    Regexp,
+    ValidationError,
+)
 from application.db_models import Users
+from application.auth.validators import DataRequiredIfOtherFieldEmpty
 
 
 class LoginForm(FlaskForm):
@@ -51,22 +61,54 @@ class ApplicationForm(FlaskForm):
     and puts it into the database
     """
 
-    first_name = StringField("First Name", validators=[DataRequired()])
-    last_name = StringField("Last Name", validators=[DataRequired()])
+    # First and last name are redundant with an associated user - preferred name could be useful
+    preferred_name = StringField("Preferred Name", validators=[DataRequired()])
     birthday = DateField("Birthday", validators=[DataRequired()])
     gender = SelectField(
-        "Gender", choices=[("Male", "Male"), ("Female", "Female"), ("Other", "Other")]
+        "Gender",
+        choices=[
+            ("", ""),
+            ("male", "Male"),
+            ("female", "Female"),
+            ("other", "Other"),
+            ("no-answer", "Prefer not to answer"),
+        ],
+        validators=[DataRequired()],
     )
-    ethnicity = StringField("Ethnicity", validators=[DataRequired()])
-
-    email = StringField("Email", validators=[DataRequired(), Email()])
+    ethnicity = SelectField(
+        "Ethnicity",
+        choices=[
+            ("", ""),
+            ("american-native", "American Indian or Alaskan Native"),
+            ("asian-pacific-islander", "Asian / Pacific Islander"),
+            ("black-african-american", "Black or African American"),
+            ("hispanic", "Hispanic"),
+            ("caucasian", "White / Caucasian"),
+            ("other", "Multiple ethnicity / Other (Please Specify)"),
+            ("no-answer", "Prefer not to answer"),
+        ],
+        validators=[DataRequired()],
+    )
+    ethnicity_other = StringField(
+        "Ethnicity (Please Specify)",
+        validators=[DataRequiredIfOtherFieldEmpty("ethnicity")],
+    )
     phone_number = StringField("Phone Number", validators=[DataRequired()])
 
     school = StringField("School", validators=[DataRequired()])
     program = StringField("Program", validators=[DataRequired()])
-    grad_year = StringField("Graduation Year", validators=[DataRequired()])
+    grad_year = IntegerField(
+        "Graduation Year",
+        validators=[
+            DataRequired(),
+            NumberRange(min=2000, max=2030, message="Please enter a realistic year"),
+        ],
+    )
 
-    resume = StringField("Resume Temp")
+    resume = FileField(
+        "Resume Temp",
+        validators=[Regexp(r"^.*\.(?:pdf|PDF)$", message="Resume must be a PDF")],
+    )
 
     q1_prev_hackathon = TextAreaField("Previous Hackathon", validators=[DataRequired()])
     q2_why_participate = TextAreaField("Why Participate", validators=[DataRequired()])
@@ -75,11 +117,6 @@ class ApplicationForm(FlaskForm):
     how_you_hear = TextAreaField("How You Hear", validators=[DataRequired()])
 
     submit = SubmitField("Register")
-
-    def validate_email(self, email):
-        search_email = Users.query.filter_by(email=email.data).first()
-        if search_email is not None:
-            raise ValidationError("Please use a different email address.")
 
 
 class ForgotPasswordEmailForm(FlaskForm):
