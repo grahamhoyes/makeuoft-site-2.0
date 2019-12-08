@@ -99,6 +99,7 @@ class ApplicationForm(FlaskForm):
     study_level = SelectField(
         "Level of Study",
         choices=[
+            ("", ""),
             ("highschool", "High School"),
             ("undergraduate", "Undergraduate"),
             ("gradschool", "Graduate School"),
@@ -136,19 +137,14 @@ class ApplicationForm(FlaskForm):
         "How did you hear about MakeUofT?", validators=[DataRequired()]
     )
 
-    mlh_conduct = BooleanField("MLH Conduct",
-        validators=[DataRequired()],
-    )
-    mlh_data = BooleanField(
-        "MLH Data",
-        validators=[DataRequired()],
-    )
+    mlh_conduct = BooleanField("MLH Conduct", validators=[DataRequired()])
+    mlh_data = BooleanField("MLH Data", validators=[DataRequired()])
     resume_share = BooleanField(
         "I consent to IEEE UofT sharing my resume with event sponsors"
     )
     age_confirmation = BooleanField(
         "I confirm that I will be 18 years of age or older and studying"
-        "at a post-secondary institution on February 16, 2020"
+        "at a post-secondary institution on February 15, 2020"
     )
 
     submit = SubmitField("Register for MakeUofT 2020")
