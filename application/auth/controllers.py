@@ -107,3 +107,9 @@ def emailConfirmed():
 def apply():
     form = ApplicationForm()
     return render_template("auth/application.html", form=form)
+
+@auth.route("/apply2", methods=["GET", "POST"])
+@login_required
+def apply2():
+    form = ApplicationForm()
+    return render_template("auth/application_new.html", form=form)

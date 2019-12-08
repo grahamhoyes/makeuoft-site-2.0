@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <!-- Foundation JS -->
+        <script src="{{ url_for('static', filename='js/foundation.min.js') }}">d</script>
+
+        <!-- Foundation CSS -->
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/css/foundation.min.css') }}" />
+
+        <!-- Site CSS -->
+        <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/css/styles.css') }}" />-->
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/css/application.css') }}" />
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700,900|Source+Sans+Pro:400,400i,600,700,900&display=swap" rel="stylesheet">
+
+        <title>Apply to MakeUofT</title>
+    </head>
+    <body>
+        <header>
+            <a href="../">
+                <img class="header-logo" src="{{ url_for('static', filename='img/CubeyBoi.svg') }}" alt="MakeUofT">
+            </a>
+        </header>
+
+
+        <div class="grid-container" id="application-form-wrapper">
+            <div class="grid-x grid-padding-x">
+                <div class="cell small-12">
+                    <h1>Apply to MakeUofT!</h1>
+                </div>
+                <div class="cell small-12" style="text-align: center">
+                    <p>In order to provide the best hackathon experience we can, we'd like to get to know you a little bit better. While we would love to welcome everyone to the hackathon, space is finite and we will not be able to accommodate everyone. We're only collecting data for admissions purposes, and to help IEEE UofT and MLH improve the event in the future.</p>
+                </div>
+            </div>
+
+
+            <form method="POST" novalidate>
+                {{ form.hidden_tag() }}
+                <div class="grid-x grid-padding-y">
+                    <div class="cell small-12 medium-3">
+                        <h4>Personal</h4>
+                    </div>
+                    <div class="cell small-12 medium-9 grid-x grid-padding-x">
+                        <div class="cell small-12 medium-6">
+                            {{ form.preferred_name.label }}
+                            {{ form.preferred_name() }}
+                        </div>
+                        <div class="cell small-12 medium-6">
+                           {{ form.birthday.label }}
+                            {{ form.birthday }}
+                        </div>
+                        <div class="cell small-12 medium-6">
+                            {{ form.gender.label }}
+                            {{ form.gender }}
+                        </div>
+                        <div class="cell small-12 medium-6">
+                            {{ form.ethnicity.label }}
+                            {{ form.ethnicity }}
+                        </div>
+                    </div>
+
+                    <div class="cell small-12 medium-3">
+                        <h4>Contact</h4>
+                    </div>
+                    <div class="cell small-12 medium-9 grid-x grid-padding-x">
+                        <div class="cell small-12 medium-4">
+                            {{ form.phone_number.label }}
+                            {{ form.phone_number }}
+                        </div>
+                    </div>
+
+                    <div class="cell small-12 medium-3">
+                        <h4>Education</h4>
+                    </div>
+                    <div class="cell small-12 medium-9 grid-x grid-padding-x">
+                        <div class="cell small-12 medium-6">
+                            {{ form.school.label }}
+                            {{ form.school }}
+                        </div>
+                        <div class="cell small-12 medium-6">
+                            {{ form.study_level.label }}
+                            {{ form.study_level }}
+                        </div>
+                        <div class="cell small-12 medium-6">
+                            {{ form.program.label }}
+                            {{ form.program }}
+                        </div>
+                        <div class="cell small-12 medium-6">
+                            {{ form.grad_year.label }}
+                            {{ form.grad_year }}
+                        </div>
+                    </div>
+
+                    <div class="cell small-12 medium-3">
+                        <h4>Resume</h4>
+                    </div>
+                    <div class="cell small-12 medium-9 grid-x grid-padding-x">
+                        <div class="cell small-12 medium-4">
+                            {{ form.resume.label }}
+                            {{ form.resume }}
+                        </div>
+                    </div>
+
+                    <div class="cell small-12 medium-3">
+                        <h4>Questions</h4>
+                    </div>
+                    <div class="cell small-12 medium-9 grid-x grid-padding-x">
+                        <div class="cell small-12">
+                           {{ form.q1_prev_hackathon.label }}
+                            {{ form.q1_prev_hackathon(rows='6') }}
+                        </div>
+                        <div class="cell small-12">
+                            {{ form.q2_why_participate.label }}
+                            {{ form.q2_why_participate(rows='6') }}
+                        </div>
+                        <div class="cell small-12">
+                            {{ form.q3_hardware_exp.label }}
+                            {{ form.q3_hardware_exp(rows='6') }}
+                        </div>
+                    </div>
+
+                    <div class="cell small-12 medium-3">
+                        <h4>One last thing</h4>
+                    </div>
+                    <div class="cell small-12 medium-9 grid-x grid-padding-x">
+                        <div class="cell small-12">
+                            {{ form.how_you_hear.label }}
+                            {{ form.how_you_hear }}
+                        </div>
+
+                        <div class="cell small-1">
+                            {{ form.mlh_conduct }}
+                        </div>
+                        <div class="cell small-11 consent-field">
+                            <label for="{{ form.mlh_conduct.id }}">I have read and agree to the <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf">MLH Code of Conduct</a></label>
+                        </div>
+
+                        <div class="cell small-1">
+                            {{ form.mlh_data }}
+                        </div>
+                        <div class="cell small-11 consent-field">
+                            <label for="{{ form.mlh_data.id }}">I authorize IEEE to share my application/registration information for event administration, ranking, MLH administration, pre- and post- event information emails, and occasional messages about hackathons in-line with the <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf">MLH Privacy Policy</a>. I further agree to the terms of both the <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf">MLH Contest Terms and Conditions</a> and the <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf">MLH Privary Policy</a>.</label>
+                        </div>
+
+                        <div class="cell small-1">
+                            {{ form.resume_share }}
+                        </div>
+                        <div class="cell small-11 consent-field">
+                            {{ form.resume_share.label }}
+                        </div>
+
+                        <div class="cell small-1">
+                            {{ form.age_confirmation }}
+                        </div>
+                        <div class="cell small-11 consent-field">
+                            {{ form.age_confirmation.label }}
+                        </div>
+                    </div>
+
+                    <div class="cell small-12" style="text-align: center;">
+                        {{ form.submit(class='button') }}
+                    </div>
+
+                </div>
+            </form>
+        </div>
+
+        <script>
+            $(document).foundation();
+        </script>
+    </body>
+</html>

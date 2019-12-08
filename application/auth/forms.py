@@ -1,7 +1,6 @@
 from flask_wtf import FlaskForm
 from wtforms import (
     BooleanField,
-    DateField,
     FileField,
     IntegerField,
     PasswordField,
@@ -10,6 +9,7 @@ from wtforms import (
     SubmitField,
     TextAreaField,
 )
+from wtforms.fields.html5 import DateField
 from wtforms.widgets import ListWidget, CheckboxInput
 from wtforms.validators import (
     DataRequired,
@@ -95,10 +95,20 @@ class ApplicationForm(FlaskForm):
     )
     phone_number = StringField("Phone Number", validators=[DataRequired()])
 
-    school = StringField("School", validators=[DataRequired()])
-    program = StringField("Program", validators=[DataRequired()])
+    school = StringField("What school are you from?", validators=[DataRequired()])
+    study_level = SelectField(
+        "Level of Study",
+        choices=[
+            ("highschool", "High School"),
+            ("undergraduate", "Undergraduate"),
+            ("gradschool", "Graduate School"),
+            ("other", "Other"),
+        ],
+        validators=[DataRequired()],
+    )
+    program = StringField("What program are you in?", validators=[DataRequired()])
     grad_year = IntegerField(
-        "Graduation Year",
+        "What is your expected graduation year?",
         validators=[
             DataRequired(),
             NumberRange(min=2000, max=2030, message="Please enter a realistic year"),
@@ -110,13 +120,38 @@ class ApplicationForm(FlaskForm):
         validators=[Regexp(r"^.*\.(?:pdf|PDF)$", message="Resume must be a PDF")],
     )
 
-    q1_prev_hackathon = TextAreaField("Previous Hackathon", validators=[DataRequired()])
-    q2_why_participate = TextAreaField("Why Participate", validators=[DataRequired()])
-    q3_hardware_exp = TextAreaField("Hardware Experience", validators=[DataRequired()])
+    q1_prev_hackathon = TextAreaField(
+        "Have you ever been to a hackathon/makeathon before? Tell us briefly about it",
+        validators=[DataRequired()],
+    )
+    q2_why_participate = TextAreaField(
+        "Why do you want to participate in MakeUofT?", validators=[DataRequired()]
+    )
+    q3_hardware_exp = TextAreaField(
+        "Tell us about any experience you have with hardware!",
+        validators=[DataRequired()],
+    )
 
-    how_you_hear = TextAreaField("How You Hear", validators=[DataRequired()])
+    how_you_hear = TextAreaField(
+        "How did you hear about MakeUofT?", validators=[DataRequired()]
+    )
 
-    submit = SubmitField("Register")
+    mlh_conduct = BooleanField("MLH Conduct",
+        validators=[DataRequired()],
+    )
+    mlh_data = BooleanField(
+        "MLH Data",
+        validators=[DataRequired()],
+    )
+    resume_share = BooleanField(
+        "I consent to IEEE UofT sharing my resume with event sponsors"
+    )
+    age_confirmation = BooleanField(
+        "I confirm that I will be 18 years of age or older and studying"
+        "at a post-secondary institution on February 16, 2020"
+    )
+
+    submit = SubmitField("Register for MakeUofT 2020")
 
 
 class ForgotPasswordEmailForm(FlaskForm):
